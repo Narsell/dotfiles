@@ -1,0 +1,2 @@
+pkill swaync
+swaync
