@@ -2,10 +2,10 @@
 @define-color mpris-album-art-overlay alpha(@background, 0.55);
 @define-color mpris-button-hover alpha(@background, 0.50);
 @define-color text @color15;
-@define-color bg alpha(@background,.5);
-@define-color bg-hover alpha(@background,.8);
+@define-color bg alpha(@background,.85);
+@define-color bg-hover alpha(@background,.95);
 @define-color mycolor @color9;
-@define-color border-color alpha(@mycolor, 0.15);
+@define-color border-color alpha(@color2, 0.9);
 
 @keyframes fadeIn{
 0% {
@@ -30,7 +30,7 @@
 .floating-notifications.background .notification-background .notification .notification-content {
 }
 .notification{
-    background: alpha(@mycolor,.5);
+    background: alpha(@mycolor,.75);
 
 }
 
@@ -95,7 +95,7 @@
 .control-center .notification-row .notification-background .notification.critical .notification-content image,
 .floating-notifications.background .notification-background .notification.critical .notification-content image{
     background-color: unset;
-    color: #ffb4a9;
+    color: #ffffff;
 
 }
 
@@ -174,6 +174,11 @@
     border:none;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .65);
 }
+
+.title > button {
+    color: @background;
+}
+
 .widget-title {
     padding:unset;
     margin:unset;
@@ -186,9 +191,9 @@
     padding:unset;
     margin:unset;
     font-size: initial;
-    color: @text;
+    color: @background;
     text-shadow: none;
-    background: rgba(255,85,85,.3);
+    background: @text;
     border: none;
     box-shadow: none;
     border-radius: 12px;
@@ -200,8 +205,9 @@
 
 .widget-title > button:hover {
     border: none;
-    background: @bg-hover;
-    transition: all .7s ease;
+    color: @text;
+    background: @color8;
+    transition: all 0.3s ease; 
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .65);
 }
 
@@ -338,10 +344,10 @@ trough highlight:hover {
 }
 
 trough slider {
-    background: transparent;
+    background: @background;
 }
 trough slider:hover {
-    background: transparent;
+    background: @background;
 }
 
 .widget-volume {
