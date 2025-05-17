@@ -2,9 +2,9 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["custom/notification","clock","custom/pacman","group/expand-left"],
+        "modules-left": ["clock","group/expand-left"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["group/expand-right","bluetooth","pulseaudio","custom/poweroff"],
+        "modules-right": ["group/expand-right","bluetooth","pulseaudio","hyprland/language","network","custom/notification"],
 
 
         "hyprland/workspaces": {
@@ -25,19 +25,29 @@
             "escape": true
         },
         "clock": {
-            "format": "{:%I:%M:%S %p} ",
+            "format": "{:L%A, %B %d | %I:%M %p}",
+            "format-alt": "{:L%I:%M:%S %p}",
             "interval": 1,   
             "tooltip-format": "<tt>{calendar}</tt>",
             "calendar": {
+                "mode"          : "year",
+                "mode-mon-col"  : 3,
+                "weeks-pos"     : "right",
+                "on-scroll"     : 1,
                 "format": {
-                    "today": "<span color='#fAfBfC'><b>{}</b></span>"
+                    "months":     "<span><b>{}</b></span>",
+                    "days":       "<span><b>{}</b></span>",
+                    "weeks":      "<span><b>W{}</b></span>",
+                    "weekdays":   "<span><b>{}</b></span>",
+                    "today":      "<span><b><u>{}</u></b></span>"
                 }
             },
-            "actions": {
-                "on-click-right": "shift_down",
-                "on-click": "shift_up"
+            "actions":  {
+                    "on-click-right": "mode",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
             }
-        },
+		},
         "network": {
             "format-wifi": "",
             "format-ethernet":"󰈀",
@@ -89,37 +99,36 @@
             "signal": 8,
             "tooltip": false,
         },
-        "custom/expand-left": {
-            "format": ">",
-            "tooltip": true,
-	    "tooltip-format": "Apps in tray" 
-        },
-        "custom/expand-right": {
-            "format": "",
-            "tooltip": true,
-	    "tooltip-format": "System status" 
-	 },
         "custom/endpoint":{
             "format": "|",
             "tooltip": false
         },
+        "custom/expand-left": {
+            "format": "󰞘",
+            "tooltip": true,
+	    "tooltip-format": "Apps in tray" 
+        },
+        "custom/expand-right": {
+            "format": "󰞗",
+            "tooltip": true,
+	    "tooltip-format": "System status" 
+	 },
 	"group/expand-left": {
             "orientation": "horizontal",
             "drawer": {
-                "transition-duration": 600,
+                "transition-duration": 500,
                 "transition-to-left": true,
-                "click-to-reveal": true
+	   	"children-class": "tray-element"
             },
             "modules": ["custom/expand-left", "tray"],
         },
         "group/expand-right": {
             "orientation": "horizontal",
             "drawer": {
-                "transition-duration": 600,
+                "transition-duration": 500,
                 "transition-to-left": true,
-                "click-to-reveal": true
             },
-            "modules": ["custom/expand-right", "custom/colorpicker", "custom/endpoint", "temperature", "cpu","memory","custom/endpoint","network"],
+            "modules": ["custom/expand-right", "custom/colorpicker", "custom/endpoint", "temperature", "cpu","memory","custom/endpoint"],
         },
         "custom/colorpicker": {
             "format": "{}",
@@ -130,16 +139,16 @@
             "signal": 1
         },
         "cpu": {
-            "format": "{usage}%  ",
+            "format": " {usage}%",
             "tooltip": true
         },
         "memory": {
-            "format": "{percentage}%  ",
+            "format": " {percentage}%",
             "tooltip": true
 	},
         "temperature": {
             "critical-threshold": 80,
-            "format": "{temperatureC}° ",
+            "format": " {temperatureC}°",
 	    "hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon1/temp1_input",
             "tooltip-format": "CPU: {temperatureC}°C"
 	},
@@ -149,7 +158,7 @@
         },
 	"pulseaudio": {
        		 // "scroll-step": 1, // %, can be a float
-        	"format": "{volume}% {icon}",
+        	"format": "{icon} {volume}%",
 	        "format-bluetooth": "{volume}% {icon}",
         	"format-bluetooth-muted": "{icon} {format_source}",
 	        "format-muted": "{format_source}",
@@ -164,6 +173,11 @@
         "on-click-right": "pavucontrol",
 	"on-click": "~/.config/waybar/scripts/toggle_audio_output.sh"
     	},
+	"hyprland/language": {
+	    "format": "󰌌 {}",
+	    "format-en": "US",
+	    "format-es": "ES"
+	},
     	"custom/poweroff": {
             "tooltip": false,
             "format": "",
