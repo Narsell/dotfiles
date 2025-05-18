@@ -36,14 +36,14 @@ $time\
 show_always = true
 style_user = "bg:#9A348E"
 style_root = "bg:#9A348E"
-format = '[$user ]($style)'
-disabled = true 
+format = '[ ]($style)'
+disabled = false 
 
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
 [os]
 style = "bg:#9A348E"
-disabled = false # Disabled by default
+disabled = true # Disabled by default
 
 [directory]
 style = "bg:#DA627D"
@@ -146,4 +146,4 @@ format = '[ $symbol ($version) ]($style)'
 disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#33658A"
-format = '[ ♥ $time ]($style)'
+format = '[  $time ]($style)'
