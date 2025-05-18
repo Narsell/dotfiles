@@ -34,7 +34,7 @@ $time\
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#9A348E"
+style_user = "fg:#bdbdbd bg:#9A348E"
 style_root = "bg:#9A348E"
 format = '[ ]($style)'
 disabled = false 
