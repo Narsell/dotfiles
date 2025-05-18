@@ -96,7 +96,3 @@ tooltip {
     transition: all .3s ease; 
 }
 
-.calendar_months
-{
- color: @foreground;
-}

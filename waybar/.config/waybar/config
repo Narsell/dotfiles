@@ -29,17 +29,18 @@
             "format-alt": "{:L%I:%M:%S %p}",
             "interval": 1,   
             "tooltip-format": "<tt>{calendar}</tt>",
+            "smooth-scrolling-threshold": 0.01,
             "calendar": {
                 "mode"          : "year",
                 "mode-mon-col"  : 3,
                 "weeks-pos"     : "right",
                 "on-scroll"     : 1,
                 "format": {
-                    "months":     "<span><b>{}</b></span>",
-                    "days":       "<span><b>{}</b></span>",
-                    "weeks":      "<span><b>W{}</b></span>",
-                    "weekdays":   "<span><b>{}</b></span>",
-                    "today":      "<span><b><u>{}</u></b></span>"
+                    "months":     "<span color='#ffead3'><b>{}</b></span>",
+                    "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                    "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                    "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                    "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
                 }
             },
             "actions":  {
@@ -174,9 +175,8 @@
 	"on-click": "~/.config/waybar/scripts/toggle_audio_output.sh"
     	},
 	"hyprland/language": {
-	    "format": "󰌌 {}",
-	    "format-en": "US",
-	    "format-es": "ES"
+	    "format": "󰌌 {short}",
+        "keyboard-name": "steelseries-steelseries-apex-5"
 	},
     	"custom/poweroff": {
             "tooltip": false,
