@@ -41,20 +41,19 @@ button {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
 }
 
-#lock:focus {
-    margin : 5px 5px 5px 200px;
-
-}
-#shutdown:focus {
-    margin : 5px 200px 5px 5px;
-}
-#logout:focus {
-    margin : 5px 200px 5px 5px;
-}
-#reboot:focus {
+#lock:focus, #lock:hover {
     margin : 5px 5px 5px 200px;
 }
-button:focus{
+#shutdown:focus, #shutdown:hover {
+    margin : 5px 200px 5px 5px;
+}
+#logout:focus, #logout:hover {
+    margin : 5px 200px 5px 5px;
+}
+#reboot:focus, #reboot:hover {
+    margin : 5px 5px 5px 200px;
+}
+button:focus, button:hover {
     background-color: alpha(@color5,1);
     color: #000000;
     background-position:center;
