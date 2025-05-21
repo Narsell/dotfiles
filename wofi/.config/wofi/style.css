@@ -1,75 +1,101 @@
-/*   _ _ _ _____ _____ _ 
-    | | | |     |   __|_|
-    | | | |  |  |   __| |
-    |_____|_____|__|  |_|  STYLE
-    
-    by Bina
-*/
+@import url('/home/daniel/.cache/wal/colors-waybar.css');
 
+@define-color text  @color2;
+@keyframes fadeIn {
+    0% {
+    }
+    100% {
+    }
+}
 
-@import ".cache/wal/colors-waybar.css";
-
-*{
-  border: none;
-  box-shadow: none;
-  outline: none;
+* {
+    all:unset;
+    font-family: 'Caskaydia Cove Nerd Font';
+    font-size: 18px;
+    outline: none;
+    border: none;
+    text-shadow:none;
+    background-color:transparent;
 }
 
 window {
-  font-size: 14px;
-  font-family: "JetBrains Mono";
-  background-color: @background;
-  border-radius: 8px;
-  opacity: 0.90;
+    all:unset;
+    padding: 20px;
+    background-color: alpha(@background, .75);
+	border-radius: 10px;
+	border: solid 1px alpha(@foreground, 0.8);
+    box-shadow: 0px 0px 5px black;
 }
-
-#outer-box {
-  margin: 10px 10px 20px 10px;
-  background-color: @background;
-  opacity: 0.90;
-}
-
 #inner-box {
-  margin: 10px;
-  background-color: @background;
-  opacity: 0.90;
+    margin: 2px;
+    padding: 5px;
+    border: none;
 }
-
-#entry {
-  padding: 5px 10px;
-  border-radius: 20px;
-}
-
-#entry #text {
-  padding: 0px 0px 0px 10px;
-  font-weight: normal;
-  color: @color7;
-}
-
-#entry:selected {
-  background-color: @color4;
-}
-
-#entry:selected #text {
-  padding: 0px 0px 0px 10px;
-  font-weight: normal;
-  color: @color0;
-}
-
-#input {
-  background: transparent;
-  margin: 0px 5px 0px 20px;
-  color: @color7;
-  padding: 5px;
-}
-
-#image {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
 #scroll {
-  margin: 0px;
+    margin: 0px;
+    padding: 30px;
+    border: none;
+}
+#input {
+    all:unset;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:20px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    color: @color7;
+    box-shadow: 1px 1px 5px rgba(0,0,0, .5);
+    border-radius: 10px;
+    background-color: alpha(@color7, .4);
+}
+#input image {
+    border: none;
+    color: @red;
+    padding-right:10px;
+}
+#input * {
+    border: none;
+    outline: none;
 }
 
+#input:focus {
+    outline: none;
+    border: none;
 
+    border-radius:10px;
+}
+#text {
+    margin: 5px;
+    border: none;
+    color: @text;
+    outline: none;
+}
+#text {
+    margin: 5px;
+    border: none;
+    color: @text;
+    outline: none;
+}
+#entry {
+    border: none;
+    margin: 5px;
+    padding: 10px;
+}
+#entry arrow {
+    border: none;
+    color: magenta;
+
+}
+#entry:selected {
+    box-shadow: 1px 1px 5px rgba(255,255,255, .03);
+    border: none;
+    border-radius: 10px;
+    background-color: alpha(@foreground, 1.0);
+}
+#entry:selected #text {
+    color: @background;
+}
+#entry:drop(active) {
+    background-color: @foreground;
+}

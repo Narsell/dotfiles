@@ -4,8 +4,7 @@
 @define-color text @foreground;
 @define-color bg alpha(@background,.85);
 @define-color bg-hover alpha(@background,.95);
-@define-color mycolor @foreground;
-@define-color border-color alpha(@color2, 0.9);
+@define-color main-color @foreground;
 
 @keyframes fadeIn{
 0% {
@@ -30,14 +29,14 @@
 .floating-notifications.background .notification-background .notification .notification-content {
 }
 .notification{
-    background: alpha(@mycolor,.75);
+    background: alpha(@main-color,.75);
 
 }
 
 .control-center .notification-row .notification-background .notification {
     margin-top: 0.150rem;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
-    background: alpha(@mycolor,.85);
+    background: alpha(@main-color,.85);
 
 }
 .floating-notifications .notification{
@@ -55,7 +54,7 @@
 
 }
 .notification widget:hover{
-    background:alpha(@mycolor,.2);
+    background:alpha(@main-color,.2);
 }
 .floating-notifications.background .notification-background .notification .notification-content,
 .control-center .notification-background .notification .notification-content {
@@ -185,8 +184,8 @@
 .control-center {
     background: @bg;
     color: @text;
-    border: solid 1px alpha(@foreground, 0.3);
-    box-shadow: 0px 0px 3px alpha(@foreground, 0.5);
+    border: solid 1px alpha(@foreground, 0.8);
+    box-shadow: 0px 0px 5px black;
 }
 
 .title > button {
@@ -297,31 +296,29 @@
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button label {
-    font-size: 20px;
-    color: @color7;
-    transition: all .7s ease;
+	font-size: 20px;
+    color: @color2;
+    transition: all .5s ease;
 }
 .widget-buttons-grid>flowbox>flowboxchild>button:hover label {
-    font-size: 20px;
-    color: @text;
-    transition: all .7s ease;
+	color: @color2;
+    transition: all .5s ease;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button {
-    background: alpha(@color4, 0.2);
+    background: alpha(@color7, 0.8);
     border-radius: 12px;
     text-shadow:none;
-    box-shadow: 0px 0px 8px rgba(255,255,255, .02);
     transition: all .5s ease;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-    background: @color4;
-    box-shadow: 0px 0px 5px alpha(@foreground, .2);
+    background: @color7;
     transition: all .5s ease;
+    box-shadow: 0px 0px 2px alpha(@color7, .65);
 
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
-    background: @mycolor;
+    background: @main-color;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked label {
     color: @background;
@@ -344,24 +341,28 @@ trough {
 
 trough highlight {
     padding: 5px;
-    background: @mycolor;
+    background: @main-color;
     border-radius: 20px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
     transition: all .7s ease;
 }
 trough highlight:hover {
     padding: 5px;
-    background: @mycolor;
+    background: @color2;
     border-radius: 20px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
-    transition: all .7s ease;
+    transition: all .5s ease;
 }
 
 trough slider {
-    background: @background;
+    background: @main-color;
+	box-shadow: 0px 0px 0px 2px @color2;
+    transition: all .5s ease;
 }
 trough slider:hover {
-    background: @background;
+    background: @main-color;
+	box-shadow: 0px 0px 0px 4px @color2;
+    transition: all .5s ease;
 }
 
 .widget-volume {
