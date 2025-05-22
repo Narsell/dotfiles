@@ -20,12 +20,12 @@
         },
         "custom/notification": {
             "tooltip": false,
-            "format": "",
+            "format": "",
             "on-click": "swaync-client -t -sw",
             "escape": true
         },
         "clock": {
-            "format": "{:L%A, %B %d | %I:%M %p}",
+            "format": "{:L%A, %B %d  %I:%M %p}",
             "format-alt": "{:L%I:%M:%S %p}",
             "interval": 1,   
             "tooltip-format": "<tt>{calendar}</tt>",
@@ -175,7 +175,9 @@
 	"on-click": "~/.config/waybar/scripts/toggle_audio_output.sh"
     	},
 	"hyprland/language": {
-	    "format": "󰌌 {short}",
+	    "format": "󰌌 {}",
+		"format-en": "US",
+		"format-es": "ES",
         "keyboard-name": "steelseries-steelseries-apex-5"
 	},
     	"custom/poweroff": {

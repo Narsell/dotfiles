@@ -29,19 +29,19 @@
 .floating-notifications.background .notification-background .notification .notification-content {
 }
 .notification{
-    background: alpha(@main-color,.75);
+    background: alpha(@main-color,.85);
 
 }
 
 .control-center .notification-row .notification-background .notification {
     margin-top: 0.150rem;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
-    background: alpha(@main-color,.85);
+    background: alpha(@main-color, .85);
 
 }
 .floating-notifications .notification{
     animation: fadeIn .5s ease-in-out;
-	box-shadow: 0px 0px 5px alpha(@foreground, 0.8);
+	box-shadow: 0px 0px 3px black ;
 }
 
 .control-center .notification-row .notification-background .notification box,
