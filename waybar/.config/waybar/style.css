@@ -2,94 +2,83 @@
 
 * {
     font-size:15px;
-    font-family: "CodeNewRoman Nerd Font Propo";
+    font-family: "CodeNewRoman Nerd Font Propo", "Font Awesome 6 Free Solid", "Font Awesome 6 Free Regular", "Font Awesome 6 Brands Regular", "Symbols Nerd Font Mono", "Symbols Nerd Font";
 }
 window#waybar{
-    all:unset;
+    all: unset;
 }
 .modules-left {
-    padding:7px 0px ;
-    margin:5px 0px 5px 10px;
-    border-radius:10px;
-    background: alpha(@background,.6);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+    margin: 5px 0px 5px 10px;
 }
 .modules-center {
-    padding:7px 0px;
-    margin:5px 0px 5px 0px;
-    border-radius:10px;
-    background: alpha(@background,.6);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+    margin: 5px 0px 5px 0px;
 }
 .modules-right {
-    padding:7px 0px;
     margin: 5px 10px 5px 0px;
-    border-radius:10px;
-    background: alpha(@background,.6);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, .6);
+}
+.modules-left, .modules-center, .modules-right {
+    padding: 7px 0px ;
+    border-radius: 10px;
+    background: alpha(@color1, .8);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .85);
 }
 tooltip {
-    background:@background;
+    background: @background;
     border: 1px solid @foreground;
-    color: @color7;
+    color: @foreground;
 }
 #clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover,#hyprland-language:hover,#custom-poweroff:hover{
     transition: all .3s ease;
-    color:@color9;
+    color: @foreground;
+	text-shadow: @foreground 0px 1px 5px;
 }
 
 .modules-right .module, .modules-left .module, .modules-center .module
 {
-    padding: 0px 7px;
+    padding: 0px 10px;
     transition: all .3s ease; 
-    color:@color7;
+    color: @foreground;
 }
+
+.modules-right #custom-notification {
+	padding-right: 20px;
+}
+
+.modules-right #temperature, .modules-left #clock  {
+	padding-left: 20px;
+} 
+
 #workspaces button {
-    all:unset;
+    all: unset;
     padding: 0px 5px;
-    color: alpha(@color9,.4);
-    transition: all .2s ease;
+    color: alpha(@foreground, .8);
+	transition: all .4s ease;
 }
 #workspaces button:hover {
-    color:@foreground;
-    border: none;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
-    transition: all 1s ease;
+    color: alpha(@color6, 0.85);
+    text-shadow: 0px 0px 2px alpha(@color6, 0.8);
+    transition: all .4s ease;
 }
 #workspaces button.active {
-    color: @foreground;
-    border: none;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, .8);
-}
-#workspaces button.empty {
-    color: rgba(0,0,0,0);
-    border: none;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .2);
-}
-#workspaces button.empty:hover {
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, .5);
-    transition: all 1s ease;
-}
-#workspaces button.empty.active {
-    color: @color9;
-    border: none;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
-}
-#group-expand-right,#group-expand-left{
-    transition: all .3s ease; 
+    color: @color6;
+    text-shadow: 0px 0px 2px alpha(@color6, 0.8);
+    transition: all .4s ease;
 }
 #custom-expand-left,#custom-expand-right{
-    color:alpha(@foreground,.4);
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, .7);
+    color: alpha(@foreground, 0.5);
     transition: all .3s ease; 
+	text-shadow: 0px 0px 0px;
+}
+#custom-expand-left:hover{
+}
+#custom-expand-right:hover{
 }
 #custom-expand-left:hover,#custom-expand-right:hover{
-    color:alpha(@foreground, .9);
     text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
+    transition: all .3s ease; 
 }
 #custom-endpoint{
-    color:@foreground;
-    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
+    color: @foreground;
 }
 #tray{
     padding: 0px 7px;

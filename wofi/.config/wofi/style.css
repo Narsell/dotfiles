@@ -1,6 +1,6 @@
 @import url('/home/daniel/.cache/wal/colors-waybar.css');
 
-@define-color text  @color2;
+@define-color text  @foreground;
 @keyframes fadeIn {
     0% {
     }
@@ -21,10 +21,9 @@
 window {
     all:unset;
     padding: 20px;
-    background-color: alpha(@background, .75);
+    background-color: alpha(@background, .85);
 	border-radius: 10px;
 	border: solid 1px alpha(@foreground, 0.8);
-    box-shadow: 0px 0px 5px black;
 }
 #inner-box {
     margin: 2px;

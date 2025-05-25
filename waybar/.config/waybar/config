@@ -4,9 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["clock","group/expand-left"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["group/expand-right","bluetooth","pulseaudio","hyprland/language","network","custom/notification"],
-
-
+        "modules-right": ["temperature","cpu","memory","custom/endpoint","bluetooth","pulseaudio","hyprland/language","network","custom/notification"],
         "hyprland/workspaces": {
             "format": "{icon}",
             "format-icons": {
@@ -51,7 +49,7 @@
 		},
         "network": {
             "format-wifi": "",
-            "format-ethernet":"󰈀",
+            "format-ethernet":"󰛳",
             "format-disconnected": "",
             "tooltip-format-disconnected": "Not connected",
             "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
@@ -105,14 +103,16 @@
             "tooltip": false
         },
         "custom/expand-left": {
-            "format": "󰞘",
+            "format": "",
             "tooltip": true,
-	    "tooltip-format": "Apps in tray" 
-        },
+		    "tooltip-format": "Apps in tray", 
+			"rotate": 90   
+	    },
         "custom/expand-right": {
-            "format": "󰞗",
+            "format": "",
             "tooltip": true,
-	    "tooltip-format": "System status" 
+		    "tooltip-format": "System status", 
+			"rotate": -90 
 	 },
 	"group/expand-left": {
             "orientation": "horizontal",
@@ -129,27 +129,19 @@
                 "transition-duration": 500,
                 "transition-to-left": true,
             },
-            "modules": ["custom/expand-right", "custom/colorpicker", "custom/endpoint", "temperature", "cpu","memory","custom/endpoint"],
-        },
-        "custom/colorpicker": {
-            "format": "{}",
-            "return-type": "json",
-            "interval": "once",
-            "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
-            "on-click": "~/.config/waybar/scripts/colorpicker.sh",
-            "signal": 1
+            "modules": ["custom/expand-right"],
         },
         "cpu": {
-            "format": " {usage}%",
+            "format": "{usage}% ",
             "tooltip": true
         },
         "memory": {
-            "format": " {percentage}%",
+            "format": "{percentage}% ",
             "tooltip": true
 	},
         "temperature": {
             "critical-threshold": 80,
-            "format": " {temperatureC}°",
+            "format": "{temperatureC}° ",
 	    "hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon1/temp1_input",
             "tooltip-format": "CPU: {temperatureC}°C"
 	},
@@ -158,27 +150,28 @@
             "spacing": 10
         },
 	"pulseaudio": {
-       		 // "scroll-step": 1, // %, can be a float
-        	"format": "{icon} {volume}%",
-	        "format-bluetooth": "{volume}% {icon}",
-        	"format-bluetooth-muted": "{icon} {format_source}",
-	        "format-muted": "{format_source}",
-        	"format-source": "",
+     		"scroll-step": 1,
+        	"format": "{volume}% {icon}",
+	        "format-bluetooth": "{volume}% ",
+        	"format-bluetooth-muted": "{format_muted}",
+	        "format-muted": "",
+        	"format-source": "",
 	        "format-source-muted": "",	
         	"format-icons": {
        			"headphone": "",
-	            	"headset": "",
+            	"headset": "",
 		        "phone": "",
-        	    	"default": ["", "", ""]
+       	    	"default": ["", "", ""]
 		    },
-        "on-click-right": "pavucontrol",
-	"on-click": "~/.config/waybar/scripts/toggle_audio_output.sh"
+	        "on-click-right": "pavucontrol",
+			"on-click": "~/.config/waybar/scripts/toggle_audio_output.sh"
     	},
 	"hyprland/language": {
 	    "format": "󰌌 {}",
 		"format-en": "US",
 		"format-es": "ES",
-        "keyboard-name": "steelseries-steelseries-apex-5"
+        "keyboard-name": "steelseries-steelseries-apex-5",
+		"tooltip": true
 	},
     	"custom/poweroff": {
             "tooltip": false,

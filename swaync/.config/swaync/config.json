@@ -50,7 +50,8 @@
             "image-radius": 0
         },
         "volume": {
-            "label": "󰕾 "
+            "label": " "
+       	    	
         },
         "buttons-grid": {
             "actions": [

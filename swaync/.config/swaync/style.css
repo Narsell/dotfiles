@@ -4,7 +4,7 @@
 @define-color text @foreground;
 @define-color bg alpha(@background,.85);
 @define-color bg-hover alpha(@background,.95);
-@define-color main-color @foreground;
+@define-color main-color @color1;
 
 @keyframes fadeIn{
 0% {
@@ -83,19 +83,19 @@
 .control-center .notification-row .notification-background .notification.normal .notification-content .body,
 .floating-notifications.background .notification-background .notification.low .notification-content .body,
 .floating-notifications.background .notification-background .notification.normal .notification-content .body {
-    color: @background;
+    color: @text;
 }
 
 .control-center .notification-row .notification-background .notification.low .notification-content .summary,
 .control-center .notification-row .notification-background .notification.normal .notification-content .summary,
 .floating-notifications.background .notification-background .notification.low .notification-content .summary,
 .floating-notifications.background .notification-background .notification.normal .notification-content .summary {
-    color: @background;
+    color: @text;
 }
 
 .control-center .notification-row .notification-background .notification.low .notification-content .time,
 .control-center .notification-row .notification-background .notification.normal .notification-content .time {
-    color: @background;
+    color: @text;
 }
 
 
@@ -348,7 +348,7 @@ trough highlight {
 }
 trough highlight:hover {
     padding: 5px;
-    background: @color2;
+    background: @foreground;
     border-radius: 20px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
     transition: all .5s ease;
@@ -356,16 +356,17 @@ trough highlight:hover {
 
 trough slider {
     background: @main-color;
-	box-shadow: 0px 0px 0px 2px @color2;
+	box-shadow: 0px 0px 0px 2px @foreground;
     transition: all .5s ease;
 }
 trough slider:hover {
     background: @main-color;
-	box-shadow: 0px 0px 0px 4px @color2;
+	box-shadow: 0px 0px 0px 4px @foreground;
     transition: all .5s ease;
 }
 
 .widget-volume {
+    font-family:"CodeNewRoman Nerd Font Propo";
     background-color: transparent;
     padding: 8px;
     margin: 8px;
