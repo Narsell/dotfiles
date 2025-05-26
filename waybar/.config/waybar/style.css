@@ -56,12 +56,12 @@ tooltip {
 }
 #workspaces button:hover {
     color: alpha(@color6, 0.85);
-    text-shadow: 0px 0px 2px alpha(@color6, 0.8);
+    text-shadow: 0px 0px 1px alpha(@color6, 0.8);
     transition: all .4s ease;
 }
 #workspaces button.active {
     color: @color6;
-    text-shadow: 0px 0px 2px alpha(@color6, 0.8);
+    text-shadow: 0px 0px 1px alpha(@color6, 1.0);
     transition: all .4s ease;
 }
 #custom-expand-left,#custom-expand-right{
