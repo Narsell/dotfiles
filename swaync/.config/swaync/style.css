@@ -297,11 +297,11 @@
 
 .widget-buttons-grid>flowbox>flowboxchild>button label {
 	font-size: 20px;
-    color: @color2;
+    color: @color1;
     transition: all .5s ease;
 }
 .widget-buttons-grid>flowbox>flowboxchild>button:hover label {
-	color: @color2;
+	color: @background;
     transition: all .5s ease;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button {
