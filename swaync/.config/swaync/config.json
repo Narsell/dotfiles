@@ -68,36 +68,37 @@
 
                 {
                     "label": "",
-                    "command": "kitty nmtui"
-                },
+                    "command": "kitty --class floating -e nmtui & swaync-client -cp",
+                	"type": "open"
+				},
                 {
                     "label": "",
-                    "command": "blueman-manager"
+                    "command": "blueman-manager & swaync-client -cp",
+					"type": "open"
                 },
                 {
-                    "label":"󰤄",
+                    "label":"󰂭",
                     "command": "swaync-client -d",
-                    "type":"toggle"
+                    "type": "toggle"
                 },
-
                 {
                     "label": "󰀟",
-                    "command": "gnome-network-displays"
+                    "command": "gnome-network-displays & swaync-client -cp",
+					"type":"open"
                 },
 
                 {
                     "label": "󰈙",
-                    "command": "kitty bash -i -c 'Docs'"
+                    "command": "nautilus ~/Documents/"
                 },
                 {
                     "label": "",
-                    "command": "kitty bash -i -c 'Settings'"
-                    
+                    "command": "notify-send \"No\""
                 },
                 {
                     "label": "",
-                    "command": "kitty bash -i -c 'tasks'"
-
+                    "command": "kitty --class floating -e btop & swaync-client -cp",
+					"type": "open"
                 },
                 {
                     "label": "",

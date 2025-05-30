@@ -54,7 +54,7 @@
             "tooltip-format-disconnected": "Not connected",
             "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
             "tooltip-format-ethernet": "{ifname} 🖧   {bandwidthUpBits}  {bandwidthDownBits}",
-            "on-click": "kitty nmtui"
+            "on-click": "kitty --class floating -e nmtui"
         },
         "bluetooth": {
             "format-on": "󰂯",

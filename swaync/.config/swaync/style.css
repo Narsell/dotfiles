@@ -286,44 +286,43 @@
     background-color: @mpris-button-hover;
 }
 .widget-buttons-grid {
-    font-family:"CodeNewRoman Nerd Font Propo";
+    font-size: 20px;
+	font-family:"CodeNewRoman Nerd Font Propo";
     padding-left: 8px;
     padding-right: 8px;
     padding-bottom: 8px;
     margin: 10px;
     border-radius: 12px;
     background:transparent;
+	border: none;
 }
-
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background: alpha(@color7, 1.0);
+    text-shadow:none;
+	box-shadow: none;
+    transition: all .5s ease;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background: alpha(@main-color, 0.8);
+    transition: all .5s ease;
+}
 .widget-buttons-grid>flowbox>flowboxchild>button label {
-	font-size: 20px;
     color: @color1;
     transition: all .5s ease;
 }
 .widget-buttons-grid>flowbox>flowboxchild>button:hover label {
-	color: @background;
+	color: @color7;
     transition: all .5s ease;
 }
-.widget-buttons-grid > flowbox > flowboxchild > button {
-    background: alpha(@color7, 0.8);
-    border-radius: 12px;
-    text-shadow:none;
-    transition: all .5s ease;
-}
-.widget-buttons-grid > flowbox > flowboxchild > button:hover {
-    background: @color7;
-    transition: all .5s ease;
-    box-shadow: 0px 0px 2px alpha(@color7, .65);
-
-}
-
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
     background: @main-color;
+    transition: all .5s ease;
+	box-shadow: none;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked label {
-    color: @background;
+    color: @color7;
+    transition: all .5s ease;
 }
-
 .widget-menubar > box > .menu-button-bar > button {
     border: none;
     background: transparent;

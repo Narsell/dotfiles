@@ -90,7 +90,7 @@ window {
     box-shadow: 1px 1px 5px rgba(255,255,255, .03);
     border: none;
     border-radius: 10px;
-    background-color: alpha(@foreground, 1.0);
+    background-color: alpha(@color1, 0.9);
 }
 #entry:selected #text {
     color: @background;

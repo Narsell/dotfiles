@@ -53,7 +53,7 @@ button {
 #reboot:focus, #reboot:hover {
     margin : 5px 5px 5px 200px;
 }
-button:focus, button:hover {
+button:focus {
     background-color: alpha(@color5,1);
     color: #000000;
     background-position:center;
