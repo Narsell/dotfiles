@@ -12,11 +12,9 @@ button {
     border-radius: 5px;
     background-repeat: no-repeat;
     background-position: center;
-
-
 }
-#lock {
-    background-image: image(url("../../.config/wlogout/lock.png"));
+#sleep {
+	background-image: image(url("../../.config/wlogout/sleep.png"));
     margin : 5px 5px 5px 300px;
     padding: 5px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
@@ -34,14 +32,13 @@ button {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
 }
 #reboot {
-
     background-image: image(url("../../.config/wlogout/restart.png"));
     margin : 5px 5px 5px 300px;
     padding: 5px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
 }
 
-#lock:focus, #lock:hover {
+#sleep:focus, #sleep:hover {
     margin : 5px 5px 5px 200px;
 }
 #shutdown:focus, #shutdown:hover {
@@ -55,6 +52,6 @@ button {
 }
 button:focus {
     background-color: alpha(@color5,1);
-    color: #000000;
+    color: @foreground;
     background-position:center;
 }
