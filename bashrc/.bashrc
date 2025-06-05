@@ -15,3 +15,6 @@ eval "$(starship init bash)"
 # Bash auto complete
 #source ble.sh/out/ble.sh 
 
+# Aliases
+alias lyraeng='cd /mnt/data/Dev/Projects/Cpp/OpenGL/LyraEngine'
+alias dots='cd ~/Documents/.dotfiles'
