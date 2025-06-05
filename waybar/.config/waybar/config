@@ -2,9 +2,9 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["clock","group/expand-left"],
-        "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["temperature","cpu","memory","custom/endpoint","bluetooth","pulseaudio","hyprland/language","network","custom/notification"],
+        "modules-left": ["hyprland/workspaces"],
+        "modules-center": ["clock"],
+        "modules-right": ["group/tray", "temperature","cpu","memory","custom/endpoint","bluetooth","pulseaudio","hyprland/language","network","custom/notification"],
         "hyprland/workspaces": {
             "format": "{icon}",
             "format-icons": {
@@ -102,35 +102,21 @@
             "format": "|",
             "tooltip": false
         },
-        "custom/expand-left": {
+        "custom/tray-icon": {
             "format": "",
             "tooltip": true,
-		    "tooltip-format": "Apps in tray", 
-			"rotate": 90   
+		    "tooltip-format": "TBD", 
+			"rotate": 270   
 	    },
-        "custom/expand-right": {
-            "format": "",
-            "tooltip": true,
-		    "tooltip-format": "System status", 
-			"rotate": -90 
-	 },
-	"group/expand-left": {
-            "orientation": "horizontal",
+        "group/tray": {
+            "orientation": "inherit",
             "drawer": {
                 "transition-duration": 500,
-                "transition-to-left": true,
-	   	"children-class": "tray-element"
+                "transition-left-to-right": false,
+			   	"children-class": "tray-element"
             },
-            "modules": ["custom/expand-left", "tray"],
-        },
-        "group/expand-right": {
-            "orientation": "horizontal",
-            "drawer": {
-                "transition-duration": 500,
-                "transition-to-left": true,
-            },
-            "modules": ["custom/expand-right"],
-        },
+            "modules": ["custom/tray-icon", "tray"],
+		},
         "cpu": {
             "format": "{usage}% ",
             "tooltip": true
@@ -138,18 +124,18 @@
         "memory": {
             "format": "{percentage}% ",
             "tooltip": true
-	},
+		},
         "temperature": {
             "critical-threshold": 80,
             "format": "{temperatureC}° ",
-	    "hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon1/temp1_input",
+		    "hwmon-path": "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon1/temp1_input",
             "tooltip-format": "CPU: {temperatureC}°C"
-	},
+		},
         "tray": {
             "icon-size": 14,
             "spacing": 10
         },
-	"pulseaudio": {
+		"pulseaudio": {
      		"scroll-step": 1,
         	"format": "{volume}% {icon}",
 	        "format-bluetooth": "{volume}% ",
@@ -170,10 +156,9 @@
 	    "format": "󰌌 {}",
 		"format-en": "US",
 		"format-es": "ES",
-        "keyboard-name": "steelseries-steelseries-apex-5",
 		"tooltip": true
 	},
-    	"custom/poweroff": {
+   	"custom/poweroff": {
             "tooltip": false,
             "format": "",
             "on-click": "wlogout -b 2"
