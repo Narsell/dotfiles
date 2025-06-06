@@ -105,7 +105,7 @@
         "custom/tray-icon": {
             "format": "",
             "tooltip": true,
-		    "tooltip-format": "TBD", 
+		    "tooltip-format": "Tray", 
 			"rotate": 270   
 	    },
         "group/tray": {
