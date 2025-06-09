@@ -6,16 +6,26 @@
         "modules-center": ["clock"],
         "modules-right": ["group/tray", "temperature","cpu","memory","custom/endpoint","bluetooth","pulseaudio","hyprland/language","network","custom/notification"],
         "hyprland/workspaces": {
-            "format": "{icon}",
-            "format-icons": {
-                "active": "",
-                "default": "",
-                "empty": ""
-            },
-            "persistent-workspaces": {
-                "*": [ 1,2,3,4,5 ]
-            }
-        },
+			"all-outputs": false,	
+            "format": "{name} <span font_size='8pt'>{windows}</span>",
+       		"window-rewrite-default": "",
+			"window-rewrite": {
+				"class<firefox>": "",
+					"class<firefox> title<.*github.*>": "",				
+					"class<firefox> title<.*youtube.*>": "",
+				"kitty": "",
+					"class<kitty> title<vim.*>": "",
+				"title<btop>": "󰊚",
+				"codium": "󰨞",
+				"music": "","discord": "",
+				"steam": "","heroic": "󰆧",
+				"class<(steam_app_.*)>": "",
+					"class<(steam_app_.*)> title<(EA)>": "",
+					"class<(steam_app_.*)> title<>": "",
+			
+			}, 
+
+		},
         "custom/notification": {
             "tooltip": false,
             "format": "",
