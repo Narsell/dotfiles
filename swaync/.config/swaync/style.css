@@ -184,7 +184,7 @@
 .control-center {
     background: @bg;
     color: @text;
-    border: solid 1px alpha(@foreground, 0.8);
+    border: solid 1px alpha(@color1, 1.0);
     box-shadow: 0px 0px 5px black;
 }
 

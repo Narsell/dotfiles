@@ -22,7 +22,7 @@
 				"class<(steam_app_.*)>": "",
 					"class<(steam_app_.*)> title<(EA)>": "",
 					"class<(steam_app_.*)> title<>": "",
-			
+				"class<(org.keepassxc.KeePassXC)>": ""			
 			}, 
 
 		},

@@ -23,7 +23,7 @@ window {
     padding: 20px;
     background-color: alpha(@background, .85);
 	border-radius: 10px;
-	border: solid 1px alpha(@foreground, 0.8);
+	border: solid 1px alpha(@color1, 1.0);
 }
 #inner-box {
     margin: 2px;

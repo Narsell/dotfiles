@@ -9,16 +9,16 @@ window#waybar{
     all: unset;
 }
 .modules-left {
-    margin: 5px 0px 5px 10px;
+    margin: 5px 0px 2px 10px;
 }
 .modules-center {
-    margin: 5px 0px 5px 0px;
+    margin: 5px 0px 2px 0px;
 }
 .modules-right {
-    margin: 5px 10px 5px 0px;
+    margin: 5px 10px 2px 0px;
 }
 .modules-left, .modules-center, .modules-right {
-    padding: 7px 0px ;
+    padding: 5px 0px ;
     border-radius: 10px;
     background: alpha(@background, .8);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .85);
@@ -31,7 +31,7 @@ tooltip {
     color: @foreground;
 }
 #clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover,#hyprland-language:hover,#custom-poweroff:hover{
-    color: @foreground;
+    color: @color1;
 }
 
 .modules-right .module, .modules-left .module, .modules-center .module {
