@@ -2,7 +2,7 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces"],
+        "modules-left": ["hyprland/workspaces", "mpris"],
         "modules-center": ["clock"],
         "modules-right": ["group/tray", "temperature","cpu","memory","custom/endpoint","bluetooth","pulseaudio","hyprland/language","network","custom/notification"],
         "hyprland/workspaces": {
@@ -16,6 +16,7 @@
 					"class<firefox> title<.*github.*>": "",				
 					"class<firefox> title<.*youtube.*>": "",
 					"class<firefox> title<Picture-in-Picture>": "",
+				"sterminal": "",
 				"kitty": "",
 					"class<kitty> title<vim.*>": "",
 				"title<btop>": "󰊚",
@@ -30,14 +31,31 @@
 			}, 
 
 		},
-        "custom/notification": {
+        "mpris": {
+			"format": "{status_icon} {artist} - {title}",
+			"format-paused": "",
+			"artist-len": 15,
+			"title-len": 20,
+			"player-icons": {
+				"default": "▶",
+				"firefox": "",
+				"chromium": "",
+			},
+			"status-icons": {
+				"playing": "",
+				"paused": "",
+				"stopped": ""
+			},
+			// "ignored-players": ["firefox"]
+		},
+		"custom/notification": {
             "tooltip": false,
             "format": "",
             "on-click": "swaync-client -t -sw",
             "escape": true
         },
         "clock": {
-            "format": "{:L%A, %B %d  %I:%M %p}",
+            "format": "{:L%A %d/%m - %I:%M %p}",
             "format-alt": "{:L%I:%M:%S %p}",
             "interval": 1,   
             "tooltip-format": "<tt>{calendar}</tt>",

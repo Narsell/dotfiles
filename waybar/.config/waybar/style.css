@@ -57,8 +57,8 @@ tooltip {
     all: unset;
     padding: 0px 10px;
 }
-#workspace button label {
-	font-weight: 400;
+#workspaces button label {
+	font-weight: 600;
     color: alpha(@foreground, .8);
 }
 #workspaces button:hover label {
@@ -67,7 +67,6 @@ tooltip {
 #workspaces button.active label {
 	font-weight: 900;
     color: @color1;
-	/*text-decoration: underline*/
 }
 
 #custom-tray-icon {
