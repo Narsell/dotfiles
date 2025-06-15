@@ -2,9 +2,9 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces", "mpris"],
+        "modules-left": ["hyprland/workspaces"],
         "modules-center": ["clock"],
-        "modules-right": ["group/tray", "temperature","cpu","memory","custom/endpoint","bluetooth","pulseaudio","hyprland/language","network","custom/notification"],
+        "modules-right": ["mpris", "group/tray", "temperature","cpu","memory","custom/endpoint","bluetooth","pulseaudio","hyprland/language","network","custom/notification"],
         "hyprland/workspaces": {
 			"all-outputs": false,	
             "format": "{name} <span font_size='8pt'>{windows}</span>",
@@ -32,8 +32,7 @@
 
 		},
         "mpris": {
-			"format": "{status_icon} {artist} - {title}",
-			"format-paused": "",
+			"format": "{status_icon} {title} - {artist}",
 			"artist-len": 15,
 			"title-len": 20,
 			"player-icons": {
