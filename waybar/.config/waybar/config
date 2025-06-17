@@ -2,9 +2,9 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces"],
+        "modules-left": ["hyprland/workspaces", "custom/endpoint", "group/tray"],
         "modules-center": ["clock"],
-        "modules-right": ["mpris", "group/tray", "temperature","cpu","memory","custom/endpoint","bluetooth","pulseaudio","hyprland/language","network","custom/notification"],
+        "modules-right": ["mpris", "group/perf", "custom/endpoint", "group/misc", "custom/endpoint", "custom/notification"],
         "hyprland/workspaces": {
 			"all-outputs": false,	
             "format": "{name} <span font_size='8pt'>{windows}</span>",
@@ -24,6 +24,7 @@
 				"music": "","nautilus": "","Qalculate!": "",
 				"steam": "","discord": "","heroic": "󰆧",
 				"hl2_linux": "",
+				"class<(steam_proton)>": "",
 				"class<(steam_app_.*)>": "",
 					"class<(steam_app_.*)> title<(EA)>": "",
 					"class<(steam_app_.*)> title<>": "",
@@ -33,10 +34,10 @@
 		},
         "mpris": {
 			"format": "{status_icon} {title} - {artist}",
+			"format-stopped": "{status_icon}",
 			"artist-len": 15,
 			"title-len": 20,
 			"player-icons": {
-				"default": "▶",
 				"firefox": "",
 				"chromium": "",
 			},
@@ -45,7 +46,37 @@
 				"paused": "",
 				"stopped": ""
 			},
-			// "ignored-players": ["firefox"]
+			"ignored-players": ["firefox"]
+		},
+		"group/perf":
+		{
+            "orientation": "inherit",
+            "drawer": {
+                "transition-duration": 500,
+                "transition-left-to-right": false,
+			   	"children-class": "perf-element",
+            },
+			"modules": [
+				 "cpu", "temperature", "memory" 	
+			]
+
+		},
+		"group/misc": 
+		{
+            "orientation": "inherit",
+            "drawer": {
+                "transition-duration": 500,
+                "transition-left-to-right": false,
+			   	"children-class": "misc-element",
+           		"click-to-reveal": true 
+			},
+			"modules": [
+				"custom/misc-icon", "bluetooth", "pulseaudio", "hyprland/language", "network"
+			]
+		},
+		"custom/misc-icon": {
+			"tooltip": false,	
+			"format": "",
 		},
 		"custom/notification": {
             "tooltip": false,
@@ -130,20 +161,20 @@
             "tooltip": false,
         },
         "custom/endpoint":{
-            "format": "|",
+            "format": " ",
             "tooltip": false
         },
         "custom/tray-icon": {
             "format": "",
             "tooltip": true,
 		    "tooltip-format": "Tray", 
-			"rotate": 270   
+			"rotate": 90   
 	    },
         "group/tray": {
             "orientation": "inherit",
             "drawer": {
                 "transition-duration": 500,
-                "transition-left-to-right": false,
+                "transition-left-to-right": true,
 			   	"children-class": "tray-element"
             },
             "modules": ["custom/tray-icon", "tray"],
