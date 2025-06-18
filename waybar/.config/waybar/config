@@ -27,7 +27,6 @@
 				"class<(steam_proton)>": "",
 				"class<(steam_app_.*)>": "",
 					"class<(steam_app_.*)> title<(EA)>": "",
-					"class<(steam_app_.*)> title<>": "",
 				"class<(org.keepassxc.KeePassXC)>": ""			
 			}, 
 
@@ -71,7 +70,7 @@
            		"click-to-reveal": true 
 			},
 			"modules": [
-				"custom/misc-icon", "bluetooth", "pulseaudio", "hyprland/language", "network"
+				 "custom/misc-icon", "hyprland/language", "bluetooth", "pulseaudio", "network"
 			]
 		},
 		"custom/misc-icon": {
@@ -199,32 +198,28 @@
         },
 		"pulseaudio": {
      		"scroll-step": 1,
-        	"format": "{volume}% {icon}",
-	        "format-bluetooth": "{volume}% ",
+        	"format": "{icon} {format_source}",
+	        "format-bluetooth": "󰂰",
         	"format-bluetooth-muted": "{format_muted}",
-	        "format-muted": "",
+	        "format-muted": "󰝟 {format_source}",
         	"format-source": "",
 	        "format-source-muted": "",	
         	"format-icons": {
        			"headphone": "",
             	"headset": "",
 		        "phone": "",
-       	    	"default": ["", "", ""]
+       	    	"default": ["󰕿", "󰖀", "󰕾"]
 		    },
+			"tooltip-format": "{volume}% - {desc}",
 	        "on-click-right": "pavucontrol",
-			"on-click": "~/.config/waybar/scripts/toggle_audio_output.sh"
-    	},
+			"on-click-middle": "~/.config/waybar/scripts/toggle_audio_output.sh",
+    		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",	
+	},
 	"hyprland/language": {
-	    "format": "󰌌 {}",
-		"format-en": "US",
-		"format-es": "ES",
+	    "format": "{}󰌌",
+		"format-en": "",
+		"format-es": "es ",
 		"tooltip": true
-	},
-   	"custom/poweroff": {
-            "tooltip": false,
-            "format": "",
-            "on-click": "wlogout -b 2"
-	},
-
+	}
 } 
 
