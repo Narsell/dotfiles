@@ -20,7 +20,7 @@
 				"kitty": "",
 					"class<kitty> title<vim.*>": "",
 				"title<btop>": "󰊚",
-				"codium": "󰨞",
+				"code": "󰨞",
 				"music": "","nautilus": "","Qalculate!": "",
 				"steam": "","discord": "","heroic": "󰆧",
 				"hl2_linux": "",
@@ -32,6 +32,7 @@
 
 		},
         "mpris": {
+			"player": "chromium",	
 			"format": "{status_icon} {title} - {artist}",
 			"format-stopped": "{status_icon}",
 			"artist-len": 15,
