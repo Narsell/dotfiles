@@ -48,9 +48,6 @@ tooltip {
 .modules-right > :first-child * {
 	padding-left: 10px;
 }
-.modules-right #temperature {
- 	padding-left: 0px;
-}
 .modules-right:last-child {
 	padding-right: 10px;
 }

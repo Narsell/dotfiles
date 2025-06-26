@@ -19,15 +19,18 @@
 				"sterminal": "",
 				"kitty": "",
 					"class<kitty> title<vim.*>": "",
-				"title<btop>": "󰊚",
+				"class<UnrealEditor> title<.+>": "<span font_size='10pt'>󰦱</span>",
+				"class<UnrealEditor> title<>": "",
 				"code": "󰨞",
+				"title<btop>": "󰊚",
+				"class<(org.keepassxc.KeePassXC)>": "",
 				"music": "","nautilus": "","Qalculate!": "",
 				"steam": "","discord": "","heroic": "󰆧",
 				"hl2_linux": "",
+				"class<Minecraft Launcher": "",
+					"class<(Minecraft\\s\\d\\.\\d+\\.\\d+)>": "",
 				"class<(steam_proton)>": "",
 				"class<(steam_app_.*)>": "",
-					"class<(steam_app_.*)> title<(EA)>": "",
-				"class<(org.keepassxc.KeePassXC)>": ""			
 			}, 
 
 		},
@@ -48,6 +51,10 @@
 			},
 			"ignored-players": ["firefox"]
 		},
+		"custom/perf-icon": {
+			"tooltip": false,	
+			"format": "",
+		},
 		"group/perf":
 		{
             "orientation": "inherit",
@@ -57,7 +64,7 @@
 			   	"children-class": "perf-element",
             },
 			"modules": [
-				 "cpu", "temperature", "memory" 	
+				 "custom/perf-icon", "temperature", "cpu", "memory" 	
 			]
 
 		},
