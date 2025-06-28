@@ -16,80 +16,49 @@
     border: none;
     text-shadow:none;
     background-color:transparent;
+	transition: all 0.3s ease;
 }
 
 window {
-    all:unset;
-    padding: 20px;
     background-color: alpha(@background, .85);
 	border-radius: 10px;
 	border: solid 1px alpha(@color1, 1.0);
 }
 #inner-box {
-    margin: 2px;
     padding: 5px;
-    border: none;
-}
-#scroll {
-    margin: 0px;
-    padding: 30px;
-    border: none;
 }
 #input {
-    all:unset;
-    margin-left:20px;
-    margin-right:20px;
-    margin-top:20px;
+    margin: 20px;
     padding: 20px;
-    border: none;
-    outline: none;
     color: @color7;
-    box-shadow: 1px 1px 5px rgba(0,0,0, .5);
+    box-shadow: 1px 1px 5px rgba(0,0,0, .65);
     border-radius: 10px;
     background-color: alpha(@color7, .4);
+	border: solid 1px alpha(@color1, 0.1);
 }
 #input image {
-    border: none;
-    color: @red;
-    padding-right:10px;
+    color: @color1;
+    padding-right: 15px;
 }
-#input * {
-    border: none;
-    outline: none;
-}
-
 #input:focus {
-    outline: none;
-    border: none;
+	border: solid 1px alpha(@color1, .9);
+}
+#scroll {
+ 	padding: 0px 15px 20px;
+}
 
-    border-radius:10px;
-}
 #text {
-    margin: 5px;
-    border: none;
     color: @text;
-    outline: none;
-}
-#text {
-    margin: 5px;
-    border: none;
-    color: @text;
-    outline: none;
 }
 #entry {
-    border: none;
-    margin: 5px;
-    padding: 10px;
+    margin: 5px 0px;
+	padding: 10px 0px 10px 10px;
+    border-radius: 10px;
 }
-#entry arrow {
-    border: none;
-    color: magenta;
-
+#entry #img {
+	padding-right: 15px;
 }
 #entry:selected {
-    box-shadow: 1px 1px 5px rgba(255,255,255, .03);
-    border: none;
-    border-radius: 10px;
     background-color: alpha(@color1, 0.9);
 }
 #entry:selected #text {

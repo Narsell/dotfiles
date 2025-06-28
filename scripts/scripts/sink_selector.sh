@@ -4,7 +4,7 @@
 options=$(pactl -f json list sinks | jq -r '.[] | .description')
 
 # Let the user select a description
-selection=$(echo "$options" | dmenu -l 5 -p "Output:")
+selection=$(printf "$options" | wofi -i -b -W 40% -L 5 -p "Audio Sink"  --dmenu)
 
 # Extract the corresponding sink name
 sink_name=$(pactl -f json list sinks | jq -r --arg sink_pretty_name "$selection" '.[] | select(.description == $sink_pretty_name) | .name')
