@@ -1,11 +1,13 @@
+// Clipboard specific config!
+
 * {{
-    active-background: {color2};
+    active-background: {color1};
     active-foreground: @foreground;
     normal-background: @background;
     normal-foreground: @foreground;
-    urgent-background: {color1};
+    urgent-background: {color4};
     urgent-foreground: @foreground;
-
+	
     alternate-active-background: @background;
     alternate-active-foreground: @foreground;
     alternate-normal-background: @background;
@@ -13,18 +15,26 @@
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
-    selected-active-background: {color1};
+    selected-active-background: {color2};
     selected-active-foreground: @foreground;
-    selected-normal-background: {color2};
+    selected-normal-background: {color1};
     selected-normal-foreground: @foreground;
-    selected-urgent-background: {color3};
+    selected-urgent-background: {color4};
     selected-urgent-foreground: @foreground;
 
     background-color: @background;
     background: {background};
     foreground: {foreground};
+
+	input-bg-color: rgba({color7.rgb}, 0.4);
+
     border-color: {color1};
     spacing: 2;
+
+	background-color: transparent;
+	cursor-width: 0px;
+
+	font: "Caskaydia Cove Nerd Font 14";
 }}
 
 #window {{
@@ -32,33 +42,46 @@
     border: 1px;
 	border-color: @border-color;
 	border-radius: 10px;
-    padding: 2.5ch;
+	padding: 20px;
 }}
 
 #mainbox {{
     border: 0;
 }}
 
-#message {{
-    border: 1px;
-    border-color: @border-color;
-	border-radius: 10px;
-    padding: 10px;
-}}
-
 #textbox {{
-    text-color: @foreground;
+	background-color: blue;
+	text-color: @normal-background;
 }}
 
 #inputbar {{
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    children:   [ entry, num-filtered-rows, textbox-divider, num-rows ];
+	background-color: @input-bg-color;
+    border: 1px;
+    border-color: @border-color;
+	border-radius: 10px;
+    text-color: @normal-foreground;
+    padding: 20px 30px;
 }}
 
-#textbox-prompt-colon {{
-    expand: false;
-    str: ":";
-    margin: 0px 0.3em 0em 0em;
-    text-color: @normal-foreground;
+#num-filtered-rows {{
+	text-color: @foreground;
+}}
+
+#textbox-divider {{
+	expand: false;
+	text-color: @foreground;
+	str: "/";
+}}
+
+#num-rows {{
+	text-color: @foreground;
+}}
+
+#entry {{
+	text-color: @foreground;
+	placeholder: "  Clipboard";	
+	placeholder-color: @foreground;    
 }}
 
 #listview {{
@@ -95,7 +118,7 @@
 
 #element.selected.normal {{
     background-color: @selected-normal-background;
-    text-color: @selected-normal-foreground;
+    text-color: @background;
 }}
 
 #element.selected.urgent {{
@@ -126,7 +149,8 @@
 #scrollbar {{
     width: 4px;
     border: 0;
-    handle-width: 8px;
+	border-radius: 5px;
+    handle-width: 4px;
     padding: 0;
 	margin: 0px 0px 0px 10px;
 }}
@@ -145,23 +169,3 @@
     text-color: @selected-normal-foreground;
 }}
 
-#inputbar {{
-    spacing: 0;
-    text-color: @normal-foreground;
-    padding: 1px;
-}}
-
-#case-indicator {{
-    spacing: 0;
-    text-color: @normal-foreground;
-}}
-
-#entry {{
-    spacing: 0;
-    text-color: @normal-foreground;
-}}
-
-#prompt {{
-    spacing: 0;
-    text-color: @normal-foreground;
-}}
