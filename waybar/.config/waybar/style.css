@@ -17,52 +17,35 @@ window#waybar{
 .modules-right {
     margin: 5px 10px 2px 0px;
 }
-.modules-left, .modules-center, .modules-right {
-    border-radius: 10px;
-    background: alpha(@background, .8);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, .85);
-	border: solid 1px alpha(@foreground, 0.5);
-
-}
 tooltip {
     background: @background;
     border: 1px solid alpha(@color1, 0.8);
     color: @foreground;
 }
 #clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover,#hyprland-language:hover, #mpris:hover, #custom-misc-icon:hover {
-    color: @color1;
+    color: @color2;
 }
 
 .modules-right .module, .modules-left .module, .modules-center .module {
     padding: 0px 10px;
     transition: all .3s ease; 
     color: @foreground;
-	border: solid 0px alpha(red, 0.4);
 }
 
-
-/* Specific padding arrangements on elements near edges */
-.modules-center .module {
-	padding: 0px 20px;	
-}
-.modules-right > :first-child * {
-	padding-left: 10px;
-}
-.modules-right:last-child {
-	padding-right: 10px;
-}
-.modules-left:first-child { /*Workspaces are the first child here and need special handling */
-	padding-left: 10px;
-}
-.modules-left > :last-child > * {
-	padding-right: 10px;
+#mpris, #clock, #workspaces, #tray, #misc {
+	padding: 5px 15px;
+	margin: 0px 5px;
+	border-radius: 10px;
+    background: alpha(@background, .8);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .85);
+	border: solid 1px alpha(@foreground, 0.3);
 }
 
-/* This is a mess but works */
-.modules-right #mpris {
-	border-right: solid 1px alpha(@foreground, 0.5);
-	margin-right: 10px;
-	padding: 0px 20px;
+#workspaces {
+	margin-left: 0px;
+}
+#misc {
+	margin-right: 0px;
 }
 
 #workspaces button {
@@ -70,34 +53,34 @@ tooltip {
     padding: 0px 10px;
 }
 #workspaces button label {
+    color: alpha(@foreground, 0.5);
 	font-weight: 600;
-    color: alpha(@foreground, .8);
 }
 #workspaces button:hover label {
-    color: @color1;
+    color: alpha(@foreground, 0.85);
 }
 #workspaces button.active label {
+    color: alpha(@foreground, 1.0);
 	font-weight: 900;
-    color: @color1;
-}
-
-
-#custom-endpoint {
-	padding: 5px 0px;	
-	margin-right: 10px;
-    color: @foreground;
-	border-right: solid 1px alpha(@foreground, 0.5);
 }
 
 #custom-tray-icon {
     color: alpha(@foreground, 0.5);
-	text-shadow: 0px 0px 0px;
 }
 #custom-tray-icon:hover{
     color: alpha(@foreground, 1.0);
     text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
 }
 
+#tray {
+	padding: 5px;
+}
+#tray #tray { /* Inner tray element. We don't want to style this.*/
+	background-color: transparent;
+	padding: 0px 5px 0px 0px;
+    box-shadow: none;
+	border: none;
+}
 #tray menu {
 	background-color: alpha(@background, 0.9);
 	border: solid 1px alpha(@color1, 0.8);
@@ -114,3 +97,4 @@ tooltip {
 #tray menu menuitem:hover label {
 	color: @background;
 }
+

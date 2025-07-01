@@ -1,0 +1,37 @@
+* {{
+    active-background: {color1};
+    active-foreground: @foreground;
+    normal-background: @background;
+    normal-foreground: @foreground;
+    urgent-background: {color4};
+    urgent-foreground: @foreground;
+	
+    alternate-active-background: @background;
+    alternate-active-foreground: @foreground;
+    alternate-normal-background: @background;
+    alternate-normal-foreground: @foreground;
+    alternate-urgent-background: @background;
+    alternate-urgent-foreground: @foreground;
+
+    selected-active-background: {color2};
+    selected-active-foreground: @foreground;
+    selected-normal-background: {color1};
+    selected-normal-foreground: @foreground;
+    selected-urgent-background: {color4};
+    selected-urgent-foreground: @foreground;
+
+    background-color: @background;
+    background: {background};
+    foreground: {foreground};
+
+	input-bg-color: rgba({color7.rgb}, 0.4);
+
+    border-color: {color1};
+    spacing: 2;
+
+	background-color: transparent;
+	cursor-width: 0px;
+
+	wallpaper: "{wallpaper}";
+	font: "Caskaydia Cove Nerd Font 14";
+}}

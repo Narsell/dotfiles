@@ -37,6 +37,9 @@ killall -SIGUSR2 waybar
 echo "Updating Firefox theme..."
 pywalfox update --verbose -p
 
+echo "Updating Vesktop walcord theme..."
+walcord -i $WALLPAPER_PATH
+
 echo "Merging Xresources for dmenu and other X apps..."
 xrdb -merge ~/.Xresources
 

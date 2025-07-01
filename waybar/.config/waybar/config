@@ -2,9 +2,9 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces", "custom/endpoint", "group/tray"],
+        "modules-left": ["hyprland/workspaces", "group/tray"],
         "modules-center": ["clock"],
-        "modules-right": ["mpris", "group/perf", "custom/endpoint", "group/misc", "custom/endpoint", "custom/notification"],
+        "modules-right": ["mpris", "group/misc"],
         "hyprland/workspaces": {
 			"all-outputs": false,	
             "format": "{name} <span font_size='8pt'>{windows}</span>",
@@ -23,7 +23,7 @@
 				"class<UnrealEditor> title<>": "",
 				"code": "󰨞",
 				"title<btop>": "󰊚",
-				"class<(org.keepassxc.KeePassXC)>": "",
+				"KeePassXC": "",
 				"music": "","nautilus": "","Qalculate!": "", "com.stremio.stremio": "󱜅", 
 				"steam": "","discord": "","heroic": "󰆧",
 				"hl2_linux": "",
@@ -51,9 +51,12 @@
 			},
 			"ignored-players": ["firefox"]
 		},
-		"custom/perf-icon": {
-			"tooltip": false,	
-			"format": "",
+		"group/misc":
+		{	
+            "orientation": "inherit",
+			"modules": [
+				 "group/perf", "group/configs", "custom/control-center" 	
+			]
 		},
 		"group/perf":
 		{
@@ -66,9 +69,12 @@
 			"modules": [
 				 "custom/perf-icon", "temperature", "cpu", "memory" 	
 			]
-
 		},
-		"group/misc": 
+		"custom/perf-icon": {
+			"tooltip": false,	
+			"format": "",
+		},
+		"group/configs": 
 		{
             "orientation": "inherit",
             "drawer": {
@@ -78,14 +84,14 @@
            		"click-to-reveal": true 
 			},
 			"modules": [
-				 "custom/misc-icon", "hyprland/language", "bluetooth", "pulseaudio", "network"
+				 "custom/config-icon", "hyprland/language", "bluetooth", "pulseaudio", "network"
 			]
 		},
-		"custom/misc-icon": {
+		"custom/config-icon": {
 			"tooltip": false,	
 			"format": "",
 		},
-		"custom/notification": {
+		"custom/control-center": {
             "tooltip": false,
             "format": "",
             "on-click": "swaync-client -t -sw",

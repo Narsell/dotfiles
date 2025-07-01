@@ -43,7 +43,7 @@
 
 #entry {{
 	text-color: @foreground;
-	placeholder: "  Clipboard";	
+	placeholder: "  Clipboard";	
 	placeholder-color: @foreground;    
 }}
 
