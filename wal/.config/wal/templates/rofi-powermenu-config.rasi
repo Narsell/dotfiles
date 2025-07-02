@@ -102,7 +102,8 @@ element {{
     text-color:                  @foreground;
     cursor:                      pointer;
 }}
-element-text {{
+element-text {{	
+	font: "Caskaydia Cove Nerd Font 25";
     background-color:            transparent;
     text-color:                  {color2};
     cursor:                      inherit;
