@@ -13,12 +13,12 @@
     alternate-urgent-background: @background;
     alternate-urgent-foreground: @foreground;
 
-    selected-active-background: {color2};
+    selected-active-background: {color4};
     selected-active-foreground: @foreground;
-    selected-normal-background: {color1};
+    selected-normal-background: {color2};
     selected-normal-foreground: @foreground;
-    selected-urgent-background: {color4};
-    selected-urgent-foreground: @foreground;
+    selected-urgent-background: {color7};
+    selected-urgent-foreground: @background;
 
     background-color: @background;
     background: {background};
@@ -26,7 +26,7 @@
 
 	input-bg-color: rgba({color7.rgb}, 0.4);
 
-    border-color: {color1};
+    border-color: @foreground;
     spacing: 2;
 
 	background-color: transparent;

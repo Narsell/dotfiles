@@ -4,7 +4,10 @@
 options=$(pactl -f json list sinks | jq -r '.[] | .description')
 
 # Let the user select a description
-selection=$(printf "$options" | wofi -i -b -W 40% -L 5 -p "Audio Sink"  --dmenu)
+selection=$(printf "$options" | rofi -dmenu -config simple-config.rasi \
+	-theme-str 'window { height: 30%; }' \
+	-theme-str 'entry  { placeholder: "Sink Selector"; }'
+)
 
 # Extract the corresponding sink name
 sink_name=$(pactl -f json list sinks | jq -r --arg sink_pretty_name "$selection" '.[] | select(.description == $sink_pretty_name) | .name')

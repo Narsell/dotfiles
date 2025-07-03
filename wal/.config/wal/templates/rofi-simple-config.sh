@@ -1,17 +1,10 @@
 @theme '~/.cache/wal/rofi-colors.rasi'
 
-/*****----- Configuration -----*****/
 configuration {{
-	modi:                       "drun,run,filebrowser";
-    display-drun:               "";
-    display-run:                "";
-    display-filebrowser:        "󰝰";
 	show-icons: true;
 }}
 
-/*****----- Main Window -----*****/
 window {{
-    /* properties for window widget */
     transparency:                "real";
     location:                    center;
     anchor:                      center;
@@ -19,18 +12,16 @@ window {{
     border-color:                @foreground;
     fullscreen:                  false;
     width:                       50%;
-  	height: 					 70%; 
+  	height: 					 50%; 
 	x-offset:                    0px;
     y-offset:                    0px;
 
-    /* properties for all widgets */
     enabled:                     true;
     border-radius:               30px 5px 30px 5px;
     cursor:                      "default";
     background-color:            @background;
 }}
 
-/*****----- Main Box -----*****/
 mainbox {{
     enabled:                     true;
     spacing:                     0px;
@@ -44,31 +35,30 @@ listbox {{
     padding:                     20px;
     background-color:            transparent;
     orientation:                 vertical;
-    border:                      2px 0px 0px 0px;
     border-color:                @foreground;
     children:                    [ "message", "listview" ];
 }}
 
-/*****----- Inputbar -----*****/
 inputbar {{
     enabled:                     true;
     spacing:                     10px;
-    padding:                     100px 60px;
+    padding:                     30px 60px;
     background-color:            transparent;
-    background-image: url("{wallpaper}", width);
+    background-image: 			 url("{wallpaper}", width);
     text-color:                  @foreground;
+	border-radius: 				 15px 5px 15px 5px;
     orientation:                 horizontal;
-    children:                    [ "textbox-prompt-colon", "entry", "dummy", "mode-switcher" ];
+    children:                    [ "textbox-prompt-colon", "entry", "dummy", "entry-counter"];
 }}
+
 textbox-prompt-colon {{
     enabled:                     true;
     expand:                      false;
-    str:                         "";
+    str:                         " ";
     padding:                     10px 15px;
     border-radius:               15px 5px 15px 5px;
-    background-color:            @background;
+    background-color:            rgba({background.rgb}, 0.75);
     text-color:                  inherit;
-    size:                        40px;
 }}
 entry {{
     enabled:                     true;
@@ -76,61 +66,75 @@ entry {{
     width:                       250px;
     padding:                     12px 16px;
     border-radius:               5px 15px 5px 15px;
-    background-color:            @background;
+    background-color:            rgba({background.rgb}, 0.75);
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "Search";
-    placeholder-color:           inherit;
+    placeholder-color:           rgba({foreground.rgb}, 0.5);
 }}
 dummy {{
     expand:                      true;
     background-color:            transparent;
 }}
 
-/*****----- Mode Switcher -----*****/
-mode-switcher{{
-    enabled:                     true;
-    spacing:                     10px;
-    background-color:            transparent;
-    text-color:                  @foreground;
-}}
-button {{
-    width:                       45px;
-    padding:                     12px;
-    border-radius:               15px 5px 15px 5px;
-    background-color:            @background;
+entry-counter {{
+    enabled: 					 true; 
+    expand:                      false;
+	orientation:				 horizontal;	
+    padding:                     12px 16px;
+	border-radius:               15px 5px 15px 5px;
+    background-color:            rgba({background.rgb}, 0.75);
     text-color:                  inherit;
-    cursor:                      pointer;
-}}
-button selected {{
-    background-color:            @selected-normal-background;
-    text-color:                  @foreground;
+	children: 					 [ num-filtered-rows, textbox-divider, num-rows ];
 }}
 
-/*****----- Listview -----*****/
+#num-filtered-rows {{
+	enabled: 					 true;	
+	text-color: 				 inherit;
+}}
+
+#textbox-divider {{
+	enabled: 					 true;
+	text-color: 				 inherit;
+	str: 						 "/";
+}}
+
+#num-rows {{
+	enabled: 					 true;
+	text-color: 				 inherit;
+}}
+
 listview {{
     enabled:                     true;
-    columns:                     2;
+    columns:                     1;
     lines:                       6;
     cycle:                       true;
     dynamic:                     true;
-    scrollbar:                   false;
+    scrollbar:                   true;
     layout:                      vertical;
     reverse:                     false;
     fixed-height:                true;
     fixed-columns:               true;
     
-    spacing:                     10px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      "default";
 }}
 
-/*****----- Elements -----*****/
+scrollbar {{
+	enabled:					 true;
+    width: 						 4px;
+	border-radius: 				 5px;
+	margin: 					 0px 0px 0px 10px;		
+	background-color: 			 rgba({foreground.rgb}, 0.3);
+	handle-color: 				 {color2};
+    handle-width: 				 4px;
+}}
+
 element {{
     enabled:                     true;
     spacing:                     10px;
-    padding:                     12px;
+    padding:                     10px;
     border-radius:               15px 5px 15px 5px;
     background-color:            transparent;
     text-color:                  @foreground;
@@ -165,6 +169,7 @@ element-icon {{
     text-color:                  inherit;
     size:                        32px;
     cursor:                      inherit;
+    border-radius:               15px 5px 15px 5px;
 }}
 element-text {{
     background-color:            transparent;
@@ -174,21 +179,3 @@ element-text {{
     horizontal-align:            0.0;
 }}
 
-/*****----- Message -----*****/
-message {{
-    background-color:            transparent;
-}}
-textbox {{
-    padding:                     12px;
-    border-radius:               15px 5px 15px 5px;
-    background-color:            @background;
-    text-color:                  @foreground;
-    vertical-align:              0.5;
-    horizontal-align:            0.0;
-}}
-error-message {{
-    padding:                     12px;
-    border-radius:               0px;
-    background-color:            @background;
-    text-color:                  @foreground;
-}}

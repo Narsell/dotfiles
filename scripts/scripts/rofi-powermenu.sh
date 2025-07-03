@@ -5,9 +5,9 @@ lastlogin="`last $USER | head -n1 | tr -s ' ' | cut -d' ' -f5,6,7`"
 uptime="`uptime -p | sed -e 's/up //g;s/ minutes/m/g;s/ hours*,/h/g'`"
 
 # Options
-hibernate=''
+hibernate=' '
 shutdown='󰐥'
-reboot=''
+reboot=' '
 lock='󰌾'
 suspend='󰤄'
 logout='󰍃'
