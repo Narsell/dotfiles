@@ -38,7 +38,7 @@ echo "Updating Firefox theme..."
 pywalfox update --verbose -p
 
 echo "Updating Vesktop walcord theme..."
-walcord -i $WALLPAPER_PATH
+walcord -i $WALLPAPER_PATH -t ~/.config/vesktop/themes/midnight-walcord.template -o ~/.config/vesktop/themes/midnight-walcord.theme.css 
 
 echo "Merging Xresources for dmenu and other X apps..."
 xrdb -merge ~/.Xresources

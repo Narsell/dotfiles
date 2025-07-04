@@ -10,6 +10,8 @@ window {{
     x-offset:                    0px;
     y-offset:                    0px;
 
+    padding:                     0px;
+    border:                      0px solid;
     border-radius:               30px 5px 30px 5px;
     border-color:                @border-color;
     cursor:                      "default";
@@ -95,7 +97,7 @@ listview {{
 element {{
     enabled:                     true;
     padding:                     20px 10px;
-    border-radius:               5px 15px 5px 15px;
+    border-radius:               10px;
     background-color:            @background;
     text-color:                  @foreground;
     cursor:                      pointer;
