@@ -1,0 +1,166 @@
+@theme '~/.cache/wal/rofi-colors.rasi'
+
+configuration {{
+    modi:                        "drun";
+    show-icons:                  true;
+    drun-display-format:         "{{name}}";
+    
+}}
+
+//----- Global Properties -----//
+
+//----- Main Window -----//
+
+window {{
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       80%;
+    
+	spacing:                     0px;
+    padding:                     0px;
+    border:                      0px;
+    border-radius:               30px 5px 30px 5px;
+	cursor:						 "default";
+    background-color:            @background;
+}}
+
+//----- Main Box -----//
+
+mainbox {{
+    children:                    [ "listview", "inputbar" ];
+    background-color:            transparent;
+	border: 					 2px;
+	border-radius:				 inherit;
+	border-color: 				 @border-color;
+}}
+
+inputbar {{
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     30px 60px;
+    background-color:            transparent;
+    text-color:                  @background;
+	border-radius: 				 15px 5px 15px 5px;
+    orientation:                 horizontal;
+    children:                    [ "dummy", "textbox-prompt-colon", "entry", "entry-counter", "dummy" ];
+}}
+
+textbox-prompt-colon {{
+    enabled:                     true;
+    expand:                      false;
+    str:                         "󰸉 ";
+    padding:                     10px 15px;
+    border-radius:               15px 5px 15px 5px;
+    background-color:            @foreground;
+    text-color:                  inherit;
+}}
+
+entry {{
+    enabled:                     true;
+    expand:                      false;
+    width:                       300px;
+    padding:                     12px 16px;
+    border-radius:               5px 15px 5px 15px;
+    background-color:            @foreground;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search Wallpaper";
+    placeholder-color:           rgba({background.rgb}, 0.5);
+}}
+
+dummy {{
+    expand:                      true;
+    background-color:            transparent;
+}}
+
+entry-counter {{
+    enabled: 					 true; 
+    expand:                      false;
+	orientation:				 horizontal;	
+    padding:                     12px 16px;
+	border-radius:               15px 5px 15px 5px;
+    background-color:            @foreground;
+    text-color:                  inherit;
+	children: 					 [ num-filtered-rows, textbox-divider, num-rows ];
+}}
+
+#num-filtered-rows {{
+	enabled: 					 true;	
+	text-color: 				 inherit;
+}}
+
+#textbox-divider {{
+	enabled: 					 true;
+	text-color: 				 inherit;
+	str: 						 "/";
+}}
+
+#num-rows {{
+	enabled: 					 true;
+	text-color: 				 inherit;
+}}
+
+//----- Listview -----//
+
+listview {{
+    enabled:                     true;
+    columns:                     6;
+    lines:                       1;
+    spacing:                     50px;
+    padding:                     20px 30px;
+    cycle:                       true;
+    dynamic:                     false;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     true;
+    fixed-height:                true;
+    fixed-columns:               true;
+    cursor:                      "default";
+    background-color:            transparent;
+    text-color:                  @foreground;
+}}
+
+//----- Elements -----//
+
+element {{
+    enabled:                     true;
+    orientation:                 horizontal;
+    spacing:                     0px;
+    padding:                     0px;
+    border-radius:               10px;
+    cursor:                      pointer;
+    background-color:            @foreground;
+	border:						 2px;
+	border-color:				 rgba({color2.rgb}, 0.8);
+    text-color:                  @background;
+}}
+
+@media(max-aspect-ratio: 1.8) {{
+    element {{
+        orientation:             vertical;
+    }}
+}}
+
+element selected.normal {{
+    background-color:            @selected-normal-background;
+    text-color:                  @selected-normal-foreground;
+}}
+
+element-icon {{
+    size:                        33%;
+    cursor:                      inherit;
+    border-radius:               0px;
+    background-color:            transparent;
+    text-color:                  inherit;
+}}
+
+element-text {{
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    padding:                     20px;
+    cursor:                      inherit;
+    background-color:            transparent;
+    text-color:                  inherit;
+}}
