@@ -2,12 +2,12 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces", "group/tray"],
+        "modules-left": ["hyprland/workspaces", "privacy", "custom/pacman", "group/tray"],
         "modules-center": ["clock"],
-        "modules-right": ["mpris", "group/misc"],
+        "modules-right": ["mpris", "group/perf", "group/configs", "custom/control-center"],
         "hyprland/workspaces": {
 			"all-outputs": false,	
-            "format": "{name} <span font_size='8pt'>{windows}</span>",
+            "format": "{name} <span font_size='9pt'>{windows}</span>",
 			"show-special": true,
 			"special-visible-only": true,
        		"window-rewrite-default": "",
@@ -52,13 +52,6 @@
 			},
 			"ignored-players": ["firefox"]
 		},
-		"group/misc":
-		{	
-            "orientation": "inherit",
-			"modules": [
-				 "group/perf", "group/configs", "custom/control-center" 	
-			]
-		},
 		"group/perf":
 		{
             "orientation": "inherit",
@@ -73,7 +66,7 @@
 		},
 		"custom/perf-icon": {
 			"tooltip": false,	
-			"format": "",
+			"format": "",
 		},
 		"group/configs": 
 		{
@@ -85,12 +78,12 @@
            		"click-to-reveal": true 
 			},
 			"modules": [
-				 "custom/config-icon", "hyprland/language", "bluetooth", "pulseaudio", "network"
-			]
+				 "custom/config-icon", "bluetooth", "pulseaudio#input", "pulseaudio#output", "hyprland/language", "network" 
+			],
 		},
 		"custom/config-icon": {
 			"tooltip": false,	
-			"format": "",
+			"format": "",
 		},
 		"custom/control-center": {
             "tooltip": false,
@@ -137,7 +130,7 @@
             "format-off": "BT-off",
             "format-disabled": "󰂲",
             "format-no-controller": "",
-	    "format-connected-battery": "{device_battery_percentage}% 󰂯",
+	    	"format-connected-battery": "{device_battery_percentage}% 󰂯",
             "format-alt": "{device_alias} 󰂯",
             "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
             "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
@@ -166,7 +159,7 @@
             ],
         },
         "custom/pacman": {
-            "format": "󰅢 {}",
+            "format": "{} 󰚰",
             "interval": 30,   
             "exec": "checkupdates | wc -l",
             "exec-if": "exit 0",
@@ -211,30 +204,65 @@
             "icon-size": 14,
             "spacing": 10
         },
-		"pulseaudio": {
+		"privacy": {
+			"icon-spacing": 10,
+			"icon-size": 12,
+			"transition-duration": 250,
+			"modules": [
+				{
+					"type": "screenshare",
+					"tooltip": true,
+					"tooltip-icon-size": 24
+				},
+				{
+					"type": "audio-in",
+					"tooltip": true,
+					"tooltip-icon-size": 24
+				}
+			],
+			"ignore-monitor": true,
+			"ignore": [
+				{
+					"type": "audio-in",
+					"name": "cava"
+				},
+				{
+					"type": "screenshare",
+					"name": "obs"
+				}
+			]
+		},
+		"pulseaudio#input": {
      		"scroll-step": 1,
-        	"format": "{icon} {format_source}",
+        	"format": "{format_source}",
+        	"format-source": "{volume}% ",
+	        "format-source-muted": "",	
+			"tooltip-format": "{format_source}",
+    		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",	
+		    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+		    "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%"
+		},
+		"pulseaudio#output": {
+     		"scroll-step": 1,
+        	"format": "{volume}% {icon}",
 	        "format-bluetooth": "󰂰",
         	"format-bluetooth-muted": "{format_muted}",
-	        "format-muted": "󰝟 {format_source}",
-        	"format-source": "",
-	        "format-source-muted": "",	
+	        "format-muted": "",
         	"format-icons": {
        			"headphone": "",
             	"headset": "",
 		        "phone": "",
-       	    	"default": ["󰕿", "󰖀", "󰕾"]
+       	    	"default": ["", "", "", ""]
 		    },
-			"tooltip-format": "{volume}% - {desc}",
+			"tooltip-format": "{desc}",
+	        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
 	        "on-click-right": "pavucontrol",
-			"on-click-middle": "~/.config/waybar/scripts/toggle_audio_output.sh",
-    		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",	
-	},
-	"hyprland/language": {
-	    "format": "{}󰌌",
-		"format-en": "",
-		"format-es": "es ",
-		"tooltip": true
-	}
+		},
+		"hyprland/language": {
+			"format": "{} 󰌌",
+			"format-en": "EN",
+			"format-es": "ES",
+			"tooltip": true
+		}
 } 
 

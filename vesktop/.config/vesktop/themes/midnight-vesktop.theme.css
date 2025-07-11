@@ -60,7 +60,7 @@ body {
     /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
     --transparency-tweaks: off; /* off: no changes, on: remove some elements for better transparency */
     --remove-bg-layer: off; /* off: no changes, on: remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
-    --panel-blur: on; /* off: no changes, on: blur the background of panels */
+    --panel-blur: off; /* off: no changes, on: blur the background of panels */
     --blur-amount: 12px; /* amount of blur */
     --bg-floating: var(--bg-3); /* set this to a more opaque color if floating panels look too transparent. only applies if panel blur is on  */
 
@@ -78,30 +78,30 @@ body {
     --colors: on; /* off: discord default colors, on: midnight custom colors */
 
     /* text colors */
-    --text-0: rgba(213,172,224,1.0); /* text on colored elements */
-    --text-1: rgba(16,17,30,1.0); /* bright text on colored elements */
-    --text-2: rgba(155,74,115,1.0); /* headings and important text */
-    --text-3: rgba(213,172,224,1.0); /* normal text */
-    --text-4: rgba(213,172,224,1.0); /* icon buttons and channels */
-    --text-5: rgba(213,172,224,0.5); /* muted channels/chats and timestamps */
+    --text-0: rgba(197,229,236,1.0); /* text on colored elements */
+    --text-1: rgba(14,11,32,1.0); /* bright text on colored elements */
+    --text-2: rgba(241,11,215,1.0); /* headings and important text */
+    --text-3: rgba(197,229,236,1.0); /* normal text */
+    --text-4: rgba(197,229,236,1.0); /* icon buttons and channels */
+    --text-5: rgba(197,229,236,0.5); /* muted channels/chats and timestamps */
 
     /* background and dark colors */
-    --bg-1: rgba(155,74,115,1.0); /* dark buttons when clicked */
-    --bg-2: rgba(155,74,115,1.0); /* dark buttons */
-    --bg-3: rgba(16,17,30,1.0); /* spacing, secondary elements */
-    --bg-4: rgba(16,17,30,1.0); /* main background color */
-    --hover: rgba(155,74,115,0.5); /* channels and buttons when hovered */
-    --active: rgba(155,74,115,1.0); /* channels and buttons when clicked or selected */
-    --active-2: rgba(72,63,156,0.2); /* extra state for transparent buttons */
-    --message-hover: rgba(213,172,224,0.2); /* messages when hovered */
+    --bg-1: rgba(241,11,215,1.0); /* dark buttons when clicked */
+    --bg-2: rgba(241,11,215,1.0); /* dark buttons */
+    --bg-3: rgba(14,11,32,1.0); /* spacing, secondary elements */
+    --bg-4: rgba(14,11,32,1.0); /* main background color */
+    --hover: rgba(241,11,215,0.5); /* channels and buttons when hovered */
+    --active: rgba(241,11,215,1.0); /* channels and buttons when clicked or selected */
+    --active-2: rgba(248,111,238,0.2); /* extra state for transparent buttons */
+    --message-hover: rgba(197,229,236,0.2); /* messages when hovered */
 
     /* accent colors */
-    --accent-1: rgba(72,63,156,1.0); /* links and other accent text */
-    --accent-2: rgba(155,74,115,0.7); /* small accent elements */
-    --accent-3: rgba(155,74,115,1.0); /* accent buttons */
-    --accent-4: rgba(72,63,156,1.0); /* accent buttons when hovered */
-    --accent-5: rgba(155,74,115,1.0); /* accent buttons when clicked */
-    --accent-new: rgba(155,74,115,1.0); /* stuff that's normally red like mute/deafen buttons */
+    --accent-1: rgba(248,111,238,1.0); /* links and other accent text */
+    --accent-2: rgba(241,11,215,0.7); /* small accent elements */
+    --accent-3: rgba(241,11,215,1.0); /* accent buttons */
+    --accent-4: rgba(248,111,238,1.0); /* accent buttons when hovered */
+    --accent-5: rgba(241,11,215,1.0); /* accent buttons when clicked */
+    --accent-new: rgba(241,11,215,1.0); /* stuff that's normally red like mute/deafen buttons */
     --mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
     --mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
     --reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
@@ -115,10 +115,10 @@ body {
     --offline: var(--text-4); /* change to #83838b for default offline color */
 
     /* border colors */
-    --border-light: rgba(213,172,224,0.1); /* general light border color */
-    --border: rgba(213,172,224,0.2); /* general normal border color */
-    --border-hover: rgba(213,172,224,0.35); /* border color of panels when hovered */
-    --button-border: rgba(16,17,30,1.0); /* neutral border color of buttons */
+    --border-light: rgba(197,229,236,0.1); /* general light border color */
+    --border: rgba(197,229,236,0.2); /* general normal border color */
+    --border-hover: rgba(197,229,236,0.35); /* border color of panels when hovered */
+    --button-border: rgba(14,11,32,1.0); /* neutral border color of buttons */
 
     /* base colors */
     --red-1: hsl(3, 76%, 70%);

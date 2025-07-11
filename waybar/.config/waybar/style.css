@@ -22,23 +22,31 @@ tooltip {
     border: 1px solid alpha(@color1, 0.8);
     color: @foreground;
 }
-#clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover,#hyprland-language:hover, #mpris:hover, #custom-misc-icon:hover {
+#clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover,#hyprland-language:hover, #mpris:hover, #custom-control-center:hover, #custom-pacman:hover, #tray:hover label {
     color: @color2;
 }
 
 .modules-right .module, .modules-left .module, .modules-center .module {
     padding: 0px 10px;
-    transition: all .3s ease; 
     color: @foreground;
 }
 
-#mpris, #clock, #workspaces, #tray, #misc {
+#mpris, #clock, #workspaces, #tray, #perf, #configs, #custom-control-center, #custom-pacman, #privacy {
+    color: @foreground;
 	padding: 5px 15px;
-	margin: 0px 5px;
+	margin: 0px 2px;
 	border-radius: 10px;
     background: alpha(@background, .8);
     box-shadow: 0px 0px 2px rgba(0, 0, 0, .85);
 	border: solid 1px alpha(@foreground, 0.3);
+}
+
+#privacy {
+	color: @foreground;
+}
+
+#tray, #perf, #configs {
+	padding: 5px;
 }
 
 #workspaces {
@@ -64,17 +72,6 @@ tooltip {
 	font-weight: 900;
 }
 
-#custom-tray-icon {
-    color: alpha(@foreground, 0.5);
-}
-#custom-tray-icon:hover{
-    color: alpha(@foreground, 1.0);
-    text-shadow: 0px 0px 2px rgba(255, 255, 255, .5);
-}
-
-#tray {
-	padding: 5px;
-}
 #tray #tray { /* Inner tray element. We don't want to style this.*/
 	background-color: transparent;
 	padding: 0px 5px 0px 0px;

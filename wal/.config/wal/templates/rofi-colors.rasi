@@ -1,5 +1,7 @@
 * {{
-    active-background: {color1};
+	wallpaper: "{wallpaper}";
+    
+	active-background: {color1};
     active-foreground: @foreground;
     normal-background: @background;
     normal-foreground: @foreground;
@@ -20,18 +22,13 @@
     selected-urgent-background: {color7};
     selected-urgent-foreground: @background;
 
-    background-color: @background;
     background: {background};
     foreground: {foreground};
-
-	input-bg-color: rgba({color7.rgb}, 0.4);
-
     border-color: @foreground;
-    spacing: 2;
 
-	background-color: transparent;
-	cursor-width: 0px;
-
-	wallpaper: "{wallpaper}";
+	// General settings
+    background-color: transparent;
+	cursor-width: 1px;
 	font: "Caskaydia Cove Nerd Font 14";
 }}
+
