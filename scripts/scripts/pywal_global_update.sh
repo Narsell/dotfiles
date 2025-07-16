@@ -34,4 +34,7 @@ walcord -i $WALLPAPER_PATH -t ~/.config/vesktop/themes/midnight-vesktop.template
 echo "Merging Xresources for dmenu and other X apps..."
 xrdb -merge ~/.Xresources
 
+echo "Reset GTK theme"
+~/scripts/reset_gtk_theme.sh
+
 echo "==> Theme update complete!"

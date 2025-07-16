@@ -12,7 +12,7 @@ lock='󰌾'
 suspend='󰤄'
 logout='󰍃'
 yes=''
-no=''
+no=' ' 
 
 # Rofi CMD
 rofi_cmd() {

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=PywalTheme
+Comment=Custom GTK theme with pywal colors based on catppuccin theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=PywalTheme
+
