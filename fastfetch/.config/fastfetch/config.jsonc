@@ -4,15 +4,10 @@
         "title",
         "separator",
         "os",
-        {
-            "type": "host",
-            "format": "{/2}{-}{/}{2}{?3} {3}{?}"
-        },
         "kernel",
         {"type": "wm", "format": "{pretty-name}"},
 		"break",
-        "shell",
-        "display",
+		"shell",
         "terminal",
 		"break",
         "cpu",
