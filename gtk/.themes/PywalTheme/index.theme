@@ -6,4 +6,4 @@ Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=PywalTheme
-
+IconTheme=Adwaita
