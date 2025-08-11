@@ -8,12 +8,13 @@
 ## Disclaimer
 This is not a plug and play rice by any means. There's no install script or thoroughly explained step-by-step tutorial.
 
-You should sort of know how this goes, but if you don't, feel free to open an issue and I'll try to help you.
+You should sort of know how this goes, but if you don't, feel free to open an issue, and I'll try to help you.
 
 ## How to Use
 I've setup the repo in a way that makes it easy to get a specific config applied into your system using stow.
+**Remember to backup your existing config before trying to apply any of these configs, stow will override them.**
 
-To apply a config, pick one of the modules by looking at the root directory names, that's the name you'll have to input into stow. 
+To apply a config, pick one of the modules by looking at the root directory names; that's the name you'll have to input into stow. 
 
 Let's say you want to copy the kitty config into your system.
  
@@ -23,7 +24,7 @@ Let's say you want to copy the kitty config into your system.
 - Clone the repository and cd into it.
 - Almost everything here uses pywal colors, so ensure you have a working pywal setup too, or copy the wal config first to ensure you have the correct templates being generated.
 
-As I mentioned, we will use stow to create symlinks to the appropiate config directories for the module you've selected.
+As I mentioned, we will use stow to create symlinks to the appropriate config directories for the module you've selected.
 
 ```
 stow -t ~ kitty
@@ -39,4 +40,4 @@ That's it, you should now have config files at `~/.config/kitty`
     - `stow -t ~ scripts`
     - `chmod +x ~/scripts/setup_symlinks.sh`
     - `~/scripts/setup_symlinks.sh`
-- Many rofi menus use custom shell scripts so definitely checkout `/scripts`
+- Many rofi menus use custom shell scripts, so definitely check out `/scripts`
