@@ -1,8 +1,8 @@
 @import url('../../.cache/wal/colors-waybar.css');
 
 * {
-    font-size:15px;
-    font-family: "CodeNewRoman Nerd Font Propo", "Font Awesome 6 Free Solid", "Font Awesome 6 Free Regular", "Font Awesome 6 Brands Regular", "Symbols Nerd Font Mono", "Symbols Nerd Font";
+    font-size:14px;
+    font-family: "CaskaydiaCove Nerd Font", "Font Awesome 6 Free Solid", "Font Awesome 6 Free Regular", "Font Awesome 6 Brands Regular", "Symbols Nerd Font Mono", "Symbols Nerd Font";
 	transition: all 0.5s ease;
 }
 window#waybar{
@@ -27,32 +27,26 @@ tooltip {
 }
 
 .modules-right .module, .modules-left .module, .modules-center .module {
-    padding: 0px 10px;
     color: @foreground;
 }
 
-#mpris, #clock, #workspaces, #tray, #perf, #configs, #custom-control-center, #custom-pacman, #privacy {
+#mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #custom-control-center, #custom-pacman, #custom-pomodoro, #privacy {
     color: @foreground;
-	padding: 5px 15px;
+	padding: 8px 15px;
 	margin: 0px 2px;
 	border-radius: 10px;
-    background: alpha(@background, .8);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, .85);
-	border: solid 1px alpha(@foreground, 0.3);
+    background: alpha(@background, .95);
+    box-shadow: 0px 0px 2px alpha(@color7, 0.35);
 }
 
-#privacy {
-	color: @foreground;
-}
-
-#tray, #perf, #configs {
-	padding: 5px;
+#audio .module {
+	margin: 0px 5px;
 }
 
 #workspaces {
 	margin-left: 0px;
 }
-#misc {
+#custom-control-center {
 	margin-right: 0px;
 }
 
@@ -60,21 +54,19 @@ tooltip {
     all: unset;
     padding: 0px 10px;
 }
-#workspaces button label {
-    color: alpha(@foreground, 0.5);
-	font-weight: 600;
+#workspaces button label { 
+   color: alpha(@foreground, 0.5);
 }
 #workspaces button:hover label {
     color: alpha(@foreground, 0.85);
 }
 #workspaces button.active label {
     color: alpha(@foreground, 1.0);
-	font-weight: 900;
 }
 
 #tray #tray { /* Inner tray element. We don't want to style this.*/
 	background-color: transparent;
-	padding: 0px 5px 0px 0px;
+	padding: 0px 5px 0px 15px;
     box-shadow: none;
 	border: none;
 }
