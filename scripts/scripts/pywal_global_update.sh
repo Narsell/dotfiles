@@ -7,17 +7,15 @@
 set -e
 
 if [ -z "$1" ]; then
-    echo "Error: No wallpaper path provided."
-    echo "Usage: $0 /path/to/wallpaper.jpg"
-    exit 1
+    echo "No wallpaper path provided. Won't update pywal and walcord colors."
+else
+	WALLPAPER_PATH="$1"
+	echo "Setting new theme from: $WALLPAPER_PATH"
+	wal -q -i "$WALLPAPER_PATH"
+	
+	echo "Updating Vesktop walcord theme..."
+	walcord -i $WALLPAPER_PATH -t ~/.config/vesktop/themes/midnight-vesktop.template.css -o ~/.config/vesktop/themes/midnight-vesktop.theme.css 
 fi
-
-WALLPAPER_PATH="$1"
-
-echo "==> Starting Pywal global update..."
-
-echo "Setting new theme from: $WALLPAPER_PATH"
-wal -q -i "$WALLPAPER_PATH"
 
 echo "Reloading Wayland notification daemon..."
 swaync-client -rs
@@ -27,9 +25,6 @@ killall -SIGUSR2 waybar
 
 echo "Updating Firefox theme..."
 pywalfox update --verbose -p
-
-echo "Updating Vesktop walcord theme..."
-walcord -i $WALLPAPER_PATH -t ~/.config/vesktop/themes/midnight-vesktop.template.css -o ~/.config/vesktop/themes/midnight-vesktop.theme.css 
 
 echo "Merging Xresources for dmenu and other X apps..."
 xrdb -merge ~/.Xresources

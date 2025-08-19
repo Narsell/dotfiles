@@ -30,7 +30,7 @@ tooltip {
     color: @foreground;
 }
 
-#mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #custom-control-center, #custom-pacman, #custom-pomodoro, #privacy {
+#mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #connection, #custom-control-center, #custom-pacman, #custom-pomodoro, #privacy {
     color: @foreground;
 	padding: 8px 15px;
 	margin: 0px 2px;
@@ -39,7 +39,7 @@ tooltip {
     box-shadow: 0px 0px 2px alpha(@color7, 0.35);
 }
 
-#audio .module {
+#audio .module, #connection .module {
 	margin: 0px 5px;
 }
 

@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["hyprland/workspaces", "custom/pacman", "group/tray"],
         "modules-center": ["clock"],
-        "modules-right": ["mpris", "privacy", "group/audio", "group/misc", "group/perf", "custom/control-center"],
+        "modules-right": ["mpris", "privacy", "group/audio", "group/misc", "custom/control-center"],
         "hyprland/workspaces": {
 			"all-outputs": false,	
             "format": "{name} <span font_size='8pt'>{windows}</span>",
@@ -48,9 +48,9 @@
 				"chromium": ""
 			},
 			"status-icons": {
-				"playing": "",
-				"paused": "",
-				"stopped": ""
+				"playing": " ",
+				"paused": " ",
+				"stopped": " "
 			},
 			"ignored-players": ["firefox"]
 		},
@@ -58,9 +58,8 @@
 		{
             "orientation": "inherit",
 			"modules": [
-					"pulseaudio#input", "pulseaudio#output", "bluetooth" 
-			]
-	
+					"pulseaudio#input", "pulseaudio#output"
+			]	
 		},
 		"group/perf":
 		{
@@ -83,7 +82,14 @@
 		{
             "orientation": "inherit",
 			"modules": [
-				 "hyprland/language", "network" 
+				 "hyprland/language"
+			]
+		},
+		"group/connection":
+		{
+			"orientation": "inherit",
+			"modules": [
+				"bluetooth", "network"
 			]
 		},
 		"custom/control-center": {
@@ -118,8 +124,8 @@
             }
 		},
         "network": {
-            "format-wifi": "",
-            "format-ethernet":"",
+            "format-wifi": " ",
+            "format-ethernet":" ",
             "format-disconnected": "",
             "tooltip-format-disconnected": "Not connected",
             "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
@@ -127,12 +133,12 @@
             "on-click": "kitty --class floating -e nmtui"
         },
         "bluetooth": {
+            "format": "󰂯 {status}",
             "format-on": "󰂯",
-            "format-off": "BT-off",
+            "format-off": "󰂯 off",
             "format-disabled": "󰂲",
-            "format-no-controller": "",
+            "format-no-controller": "󰂲",
 	    	"format-connected-battery": "{device_battery_percentage}% 󰂯",
-            "format-alt": "{device_alias} 󰂯",
             "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
             "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
             "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
@@ -230,9 +236,8 @@
         	"format-bluetooth-muted": "{format_muted}",
 	        "format-muted": " muted",
         	"format-icons": {
-       			"headphone": "",
-            	"headset": "",
-		        "phone": "",
+       			"headphone": " ",
+            	"headset": " ",
        	    	"default": ["", "", " ", " "]
 		    },
 			"tooltip-format": "{desc}",
