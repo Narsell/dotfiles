@@ -302,12 +302,12 @@
 	box-shadow: none;
     transition: all .5s ease;
 }
-.widget-buttons-grid > flowbox > flowboxchild > button:hover {
-    background: alpha(@main-color, 0.8);
-    transition: all .5s ease;
-}
 .widget-buttons-grid>flowbox>flowboxchild>button label {
     color: @color1;
+    transition: all .5s ease;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background: alpha(@color2, 1);
     transition: all .5s ease;
 }
 .widget-buttons-grid>flowbox>flowboxchild>button:hover label {
@@ -320,6 +320,15 @@
 	box-shadow: none;
 }
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked label {
+    color: @color7;
+    transition: all .5s ease;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked:hover {
+    background: @color2;
+    transition: all .5s ease;
+	box-shadow: none;
+}
+.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked:hover label {
     color: @color7;
     transition: all .5s ease;
 }
@@ -340,14 +349,14 @@ trough {
 
 trough highlight {
     padding: 5px;
-    background: @main-color;
+    background: @foreground;
     border-radius: 20px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
     transition: all .7s ease;
 }
 trough highlight:hover {
     padding: 5px;
-    background: @foreground;
+    background: @main-color;
     border-radius: 20px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
     transition: all .5s ease;

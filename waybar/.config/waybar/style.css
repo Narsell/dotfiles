@@ -22,7 +22,7 @@ tooltip {
     border: 1px solid alpha(@color1, 0.8);
     color: @foreground;
 }
-#clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover,#hyprland-language:hover, #mpris:hover, #custom-control-center:hover, #custom-pacman:hover, #tray:hover label {
+#clock:hover, #custom-updates:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover,#hyprland-language:hover, #mpris:hover, #custom-control-center:hover, #custom-updates:hover, #tray:hover label {
     color: @color2;
 }
 
@@ -30,7 +30,7 @@ tooltip {
     color: @foreground;
 }
 
-#mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #connection, #custom-control-center, #custom-pacman, #custom-pomodoro, #privacy {
+#mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #connection, #custom-control-center, #custom-updates, #custom-pomodoro, #privacy {
     color: @foreground;
 	padding: 8px 15px;
 	margin: 0px 2px;

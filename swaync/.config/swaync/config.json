@@ -58,12 +58,14 @@
                 {
                     "label": "󰝟",
                     "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+               		"update-command": "pactl get-sink-mute @DEFAULT_SINK@ | grep -q 'yes' && echo true || echo false",
                     "type": "toggle"
                 },
                 {
                     "label": "󰍭",
                     "command": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-                    "type": "toggle"
+               		"update-command": "pactl get-source-mute @DEFAULT_SOURCE@ | grep -q 'yes' && echo true || echo false",
+				    "type": "toggle"
                 },
 
                 {
@@ -76,12 +78,13 @@
                     "command": "blueman-manager & swaync-client -cp",
 					"type": "open"
                 },
-                {
-                    "label":"󰂭",
-                    "command": "swaync-client -d",
-                    "type": "toggle"
-                },
-                {
+				{
+					"type": "toggle",
+					"label": "󰂭",
+					"command": "swaync-client -d",
+					"update-command": "swaync-client -D"
+				},
+				{
                     "label": "󰀟",
                     "command": "gnome-network-displays & swaync-client -cp",
 					"type":"open"

@@ -2,7 +2,7 @@
         "layer": "top",
         "position": "top",
         "reload_style_on_change": true,
-        "modules-left": ["hyprland/workspaces", "custom/pacman", "group/tray"],
+        "modules-left": ["hyprland/workspaces", "custom/updates", "group/tray"],
         "modules-center": ["clock"],
         "modules-right": ["mpris", "privacy", "group/audio", "group/misc", "custom/control-center"],
         "hyprland/workspaces": {
@@ -13,22 +13,19 @@
        		"window-rewrite-default": "",
 			"window-rewrite": {
 				"class<firefox>": "",
-					"class<firefox> title<.*github.*>": "",				
-					"class<firefox> title<.*youtube.*>": "",
-					"class<firefox> title<Picture-in-Picture>": "",
 				"sterminal": "",
 				"kitty": "",
 					"class<kitty> title<vim.*>": "",
 				"class<UnrealEditor> title<.+>": "<span font_size='10pt'>󰦱</span>",
 				"class<UnrealEditor> title<>": "",
-				"class<io.github.achetagames.epic_asset_manager>": "",
+				"class<io.github.achetagames.epic_asset_manager>": " ",
 				"obsidian": "󰠮",
 				"code": "󰨞",
 				"title<btop>": "󰊚",
 				"KeePassXC": "",
 				"Rofi": "",
 				"music": "","nautilus": "","Qalculate!": "", "com.stremio.stremio": "󱜅", 
-				"steam": "","discord": "","heroic": "",
+				"steam": "","discord": " ","heroic": "",
 				"hl2_linux": "",
 				"class<Minecraft Launcher": "",
 					"class<(Minecraft\\s\\d\\.\\d+\\.\\d+)>": "",
@@ -145,15 +142,16 @@
             "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
             "on-click-right": "blueman-manager"
         }, 
-        "custom/pacman": {
-            "format": "{} 󰚰",
-            "interval": 30,   
-            "exec": "checkupdates | wc -l",
-            "exec-if": "exit 0",
-            "on-click": "kitty sh -c 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
-            "signal": 8,
-            "tooltip": false
-        },
+		"custom/updates": {
+				"format": "{} {icon}",
+				"return-type": "json",
+				"format-icons": {
+						"has-updates": "󱍷",
+						"updated": "󰂪"
+				},
+				"exec-if": "which waybar-module-pacman-updates",
+				"exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300 --color-semver-updates --tooltip-align-columns"
+		},
         "custom/endpoint":{
             "format": " ",
             "tooltip": false
@@ -223,7 +221,7 @@
      		"scroll-step": 1,
         	"format": "{format_source}",
         	"format-source": " {volume}%",
-	        "format-source-muted": " muted",	
+	        "format-source-muted": " ",	
 			"tooltip-format": "{format_source}",
     		"on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",	
 		    "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
@@ -234,7 +232,7 @@
         	"format": "{icon} {volume}%",
 	        "format-bluetooth": "󰂰",
         	"format-bluetooth-muted": "{format_muted}",
-	        "format-muted": " muted",
+	        "format-muted": "",
         	"format-icons": {
        			"headphone": " ",
             	"headset": " ",
