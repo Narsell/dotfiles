@@ -11,5 +11,5 @@ set relativenumber
 vnoremap <C-c> "+y
 
 " Navigate page up/down and center cursor
-nnoremap("<C-d>", "<C-d>zz")
-nnoremap("<C-u>", "<C-u>zz")
+nnoremap <C-d> <C-d>zz
+nnoremap<C-u> <C-u>zz

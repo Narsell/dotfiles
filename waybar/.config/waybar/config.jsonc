@@ -16,9 +16,9 @@
 				"sterminal": "",
 				"kitty": "",
 					"class<kitty> title<vim.*>": "",
-				"class<UnrealEditor> title<.+>": "<span font_size='10pt'>󰦱</span>",
-				"class<UnrealEditor> title<>": "",
-				"class<io.github.achetagames.epic_asset_manager>": " ",
+				"class<UnrealEditor-?.*> title<.+>": "<span font_size='10pt'>󰦱</span>",
+				"class<UnrealEditor-?.*> title<>": "",
+				"class<io.github.achetagames.epic_asset_manager>": "",
 				"obsidian": "󰠮",
 				"code": "󰨞",
 				"title<btop>": "󰊚",
@@ -27,7 +27,8 @@
 				"music": "","nautilus": "","Qalculate!": "", "com.stremio.stremio": "󱜅", 
 				"steam": "","discord": " ","heroic": "",
 				"hl2_linux": "",
-				"class<Minecraft Launcher": "",
+				"Turtle-wow": "",
+				"Minecraft Launcher": "",
 					"class<(Minecraft\\s\\d\\.\\d+\\.\\d+)>": "",
 				"class<(steam_proton)>": "",
 				"class<(steam_app_.*)>": ""
@@ -152,10 +153,6 @@
 				"exec-if": "which waybar-module-pacman-updates",
 				"exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300 --color-semver-updates --tooltip-align-columns"
 		},
-        "custom/endpoint":{
-            "format": " ",
-            "tooltip": false
-        },
         "custom/tray-icon": {
             "format": "󰍻 ",
             "tooltip": true,
