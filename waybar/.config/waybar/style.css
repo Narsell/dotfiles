@@ -39,7 +39,7 @@ tooltip {
     box-shadow: 0px 0px 2px alpha(@color7, 0.35);
 }
 
-#audio .module, #connection .module {
+#audio .module, #connection .module, #misc .module {
 	margin: 0px 5px;
 }
 

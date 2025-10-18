@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["hyprland/workspaces", "custom/updates", "group/tray"],
         "modules-center": ["clock"],
-        "modules-right": ["mpris", "privacy", "group/audio", "group/misc", "custom/control-center"],
+        "modules-right": ["mpris", "privacy", "group/audio", "group/misc", "group/connection", "custom/control-center"],
         "hyprland/workspaces": {
 			"all-outputs": false,	
             "format": "{name} <span font_size='8pt'>{windows}</span>",
@@ -80,8 +80,23 @@
 		{
             "orientation": "inherit",
 			"modules": [
-				 "hyprland/language"
+				"custom/dnd",	
+			    "hyprland/language"
 			]
+		},
+		"custom/dnd":	
+		{
+			"exec": "~/scripts/dnd_status.sh",
+			"return-type": "json",
+			"interval": 10,
+			"exec-on-event": true,	
+			"tooltip": false,	
+			"format": "{icon}",
+            "on-click": "swaync-client -d",
+			"format-icons": {
+				"allow-notifs": "󰂚 ",
+				"block-notifs": "󰂛 "	
+			}
 		},
 		"group/connection":
 		{
