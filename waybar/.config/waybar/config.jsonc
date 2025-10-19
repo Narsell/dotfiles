@@ -170,8 +170,7 @@
 		},
         "custom/tray-icon": {
             "format": "󰍻 ",
-            "tooltip": true,
-		    "tooltip-format": "Tray", 
+            "tooltip": false,
 			"rotate": 180   
 	    },
         "group/tray": {

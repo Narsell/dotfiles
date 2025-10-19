@@ -21,7 +21,7 @@
 wall_dir="${HOME}/Pictures/Wallpapers/"
 cache_dir="${HOME}/.cache/thumbnails/wal_selector"
 rofi_config_path="${HOME}/.config/rofi/wallpaper-sel-config.rasi "
-rofi_command="rofi -dmenu -config ${rofi_config_path} -theme-str ${rofi_override}"
+rofi_command="rofi -dmenu -config ${rofi_config_path}"
 
 # Create cache dir if not exists
 if [ ! -d "${cache_dir}" ] ; then
