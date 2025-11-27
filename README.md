@@ -1,7 +1,8 @@
 # Arch hyprland rice
 
-<img src="./screenshots/2025-07-17_18-30.png" width="45%"/> <img src="./screenshots/2025-07-17_18-32.png" width="45%"/> 
-<img src="./screenshots/2025-07-17_18-45.png" width="45%"/> <img src="./screenshots/2025-07-17_18-43.png" width="45%"/> 
+<img src="./screenshots/2025-11-26_21-12.png" width="45%"/> <img src="./screenshots/2025-11-26_21-04.png" width="45%"/> 
+<img src="./screenshots/2025-11-26_21-01.png" width="45%"/> <img src="./screenshots/2025-11-26_21-03.png" width="45%"/> 
+<img src="./screenshots/2025-11-26_21-10.png" width="45%"/> <img src="./screenshots/2025-11-26_21-24.png" width="45%"/> 
 
 **[All screenshots](./screenshots/)**
 
@@ -44,4 +45,3 @@ That's it, you should now have config files at `~/.config/kitty`
 - Many rofi menus use custom shell scripts, so definitely check out `/scripts`
 - Waybar depends on the following third-party modules:
     - [Pacman Updates Waybar Module](https://github.com/coffebar/waybar-module-pacman-updates) by Coffebar
-- Waybar screenshots are a little outdated but I can't be bothered to recreate the screenshots right now. But trust me, it's better while maintaining the same overall style.
