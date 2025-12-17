@@ -6,7 +6,8 @@ configuration {{
     display-drun:               " ";
     display-run:                "";
     display-filebrowser:        "󰝰 ";
-	show-icons: true;
+	show-icons: 				true;
+	drun-show-actions: 			true;
 }}
 
 /*****----- Main Window -----*****/
