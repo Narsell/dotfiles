@@ -1,0 +1,13 @@
+[Unit]
+Description=Starts the Unified Remote Server
+After=network.target
+
+[Service]
+ExecStart=/opt/urserver/urserver-start
+ExecReload=/opt/urserver/urserver-start
+Type=exec
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+
