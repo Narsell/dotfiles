@@ -90,8 +90,8 @@ body {
     --bg-2: KEY(2, 1.0); /* dark buttons */
     --bg-3: KEY(B, 1.0); /* spacing, secondary elements */
     --bg-4: KEY(B, 1.0); /* main background color */
-    --hover: KEY(2, 0.5); /* channels and buttons when hovered */
-    --active: KEY(2, 1.0); /* channels and buttons when clicked or selected */
+    --hover: KEY(6, 0.5); /* channels and buttons when hovered */
+    --active: KEY(6, 1.0); /* channels and buttons when clicked or selected */
     --active-2: KEY(3, 0.2); /* extra state for transparent buttons */
     --message-hover: KEY(F, 0.2); /* messages when hovered */
 
