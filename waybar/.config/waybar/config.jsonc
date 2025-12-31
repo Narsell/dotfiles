@@ -28,7 +28,7 @@
 				"steam": "","discord": " ","heroic": "",
 				"hl2_linux": "",
 				"Turtle-wow": "",
-				"Minecraft Launcher": "",
+				"class<(Minecraft Launcher)": "",
 					"class<(Minecraft\\s\\d\\.\\d+\\.\\d+)>": "",
 				"class<(steam_proton)>": "",
 				"class<(steam_app_.*)>": ""
