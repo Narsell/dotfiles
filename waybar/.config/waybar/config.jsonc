@@ -29,7 +29,9 @@
 				"hl2_linux": "",
 				"Turtle-wow": "",
 				"class<(Minecraft Launcher)": "",
-					"class<(Minecraft\\s\\d\\.\\d+\\.\\d+)>": "",
+					"class<(Minecraft.*\\d\\.\\d+\\.\\d+.*)>": "",
+				"class<(com.hypixel.HytaleLauncher)": "",	
+					"class<(HytaleClient)>": "",
 				"class<(steam_proton)>": "",
 				"class<(steam_app_.*)>": ""
 			} 
