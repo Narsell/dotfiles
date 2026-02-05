@@ -83,6 +83,7 @@
             "orientation": "inherit",
 			"modules": [
 				"custom/dnd",	
+				"custom/colortemp",
 			    "hyprland/language"
 			]
 		},
@@ -99,6 +100,14 @@
 				"allow-notifs": "󰂚 ",
 				"block-notifs": "󰂛 "	
 			}
+		},
+		"custom/colortemp": {
+			"format": "{icon}",
+			"format-icons": ["󱩍", "󱩌"],
+			"interval": 30,
+			"exec": "/home/daniel/Documents/gradtemp/zig-out/bin/gradtemp",
+			"on-click": "/home/daniel/Documents/gradtemp/zig-out/bin/gradtemp tgl",
+			"return-type": "json"
 		},
 		"group/connection":
 		{

@@ -1,0 +1,14 @@
+{
+	"day": 5500,
+	"night": 1900,
+	"dawn": {
+		"start": 4,
+		"end": 7,
+		"scale": "grow"
+	},
+	"dusk": {
+		"start": 18,
+		"end": 21,
+		"scale": "decay"
+	}
+}
