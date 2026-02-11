@@ -19,3 +19,6 @@ ln -s ~/.cache/wal/obsidian_template.css ~/Documents/Obsidian/Meditations/.obsid
 
 # Calibre theme
 ln -s ~/.cache/wal/pywal.calibre-palette ~/.config/calibre/palettes/pywal.calibre-palette
+
+# Heroice launcher theme
+ln -s ~/.cache/wal/heroic-launcher.css ~/.config/heroic/themes/

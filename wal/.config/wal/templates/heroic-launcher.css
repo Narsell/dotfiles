@@ -1,0 +1,75 @@
+body {{
+  --text-default: {foreground};
+  --text-secondary: {foreground};
+  --background: {background};
+  --text-tertiary: {foreground};
+  --tertiary-button: var(--status-warning);
+  --tertiary-button-overlay: var(--status-warning-hover);
+  --cancel-button: var(--status-warning);
+  --cancel-button-overlay: var(--status-warning-hover);
+  --background-darker-80: var(--eighty-percent-black);
+
+  --anticheat-denied: var(--status-danger);
+  --anticheat-broken: var(--status-warning);
+  --anticheat-running: var(--status-default);
+  --anticheat-supported: var(--status-success);
+  --anticheat-planned: var(--status-info);
+  --anticheat-unknown: var(--status-denied);
+}}
+
+* {{
+  --accent: {color2};
+  --accent-overlay: rgba({foreground}, 0.676);
+  --navbar-accent: {foreground};
+  --background: {background};
+  --body-background: {background};
+  --background-darker: {background};
+  --current-background: var(--body-background);
+  --navbar-background: {background};
+  --navbar-active-background: rgba({color2.rgb}, 0.7);
+  --gradient-body-background: linear-gradient(
+      90deg, var(--background-darker) -32px,
+      var(--body-background) 64px,
+      var(--body-background) 100%
+  );
+  --input-background: rgba({color2.rgb}, 0.95);
+  --modal-background: var(--body-background);
+  --modal-border: var(--body-background);
+  --success: rgba({foreground.rgb}, 0.85);
+  --success-hover: rgba({foreground.rgb}, 1.0);
+  --primary: rgba({color2.rgb}, 0.85);
+  --primary-hover: {color2};
+  --danger: orange;
+  --danger-hover: red;
+  --anticheat-denied: #9d0006;
+  --anticheat-broken: #af3a03;
+  --anticheat-running: #076678;
+  --anticheat-supported: #79740e;
+  --anticheat-planned: #8f3f71;
+  --text-title: {foreground};
+  --icons-background: {color2};
+  --action-icon: {color3};
+  --action-icon-hover: {color2};
+  --action-icon-active: {color3};
+  --icon-disabled: {color6};
+  --brand-primary: rgba({color2.rgb}, 0.8);
+  --brand-secondary: {foreground};
+  --secondary-button: {color3};
+}}
+
+input::placeholder {{
+ color: rgba({foreground.rgb}, 0.8);
+}}
+
+button.downIcon circle {{
+  fill: rgba({foreground.rgb}, 0.5);
+}}
+
+button.downIcon:hover circle {{
+  fill: {foreground};
+}}
+
+.diskLabel {{
+  color: {foreground};
+}}
+
