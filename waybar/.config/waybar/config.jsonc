@@ -16,6 +16,8 @@
 				"sterminal": "",
 				"kitty": "",
 					"class<kitty> title<vim.*>": "",
+				"class<calibre-ebook-viewer>": "",
+				"class<calibre-gui>": "󰌱",
 				"class<UnrealEditor-?.*> title<.+>": "<span font_size='10pt'>󰦱</span>",
 				"class<UnrealEditor-?.*> title<>": "",
 				"class<io.github.achetagames.epic_asset_manager>": "",

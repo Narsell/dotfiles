@@ -1,0 +1,56 @@
+{{
+    "light": {{
+        "palette": {{
+            "AlternateBase": "#eff1f5",
+            "Base": "#e6e9ef",
+            "BrightText": "#4c4f69",
+            "BrightText-disabled": "#4c4f69",
+            "Button": "#eff1f5",
+            "ButtonText": "#4c4f69",
+            "ButtonText-disabled": "#acb0be",
+            "Highlight": "#eaae8f",
+            "HighlightedText": "#4c4f69",
+            "HighlightedText-disabled": "#e6e9ef",
+            "Link": "#dc8a78",
+            "LinkVisited": "#1e66f5",
+            "PlaceholderText": "#4c4f69",
+            "PlaceholderText-disabled": "#4c4f69",
+            "Text": "#4c4f69",
+            "Text-disabled": "#acb0be",
+            "ToolTipBase": "#dce0e8",
+            "ToolTipText": "#4c4f69",
+            "ToolTipText-disabled": "#4c4f69",
+            "Window": "#dce0e8",
+            "WindowText": "#4c4f69",
+            "WindowText-disabled": "#acb0be"
+        }},
+        "use_custom": true
+    }},
+    "dark": {{
+        "palette": {{
+            "AlternateBase": "{background}",
+            "Base": "{background}",
+            "BrightText": "{foreground}",
+            "BrightText-disabled": "#cdd6f4",
+            "Button": "{background}",
+            "ButtonText": "{foreground}",
+            "ButtonText-disabled": "#585b70",
+            "Highlight": "{color2}",
+            "HighlightedText": "{background}",
+            "HighlightedText-disabled": "#181825",
+            "Link": "{color2}",
+            "LinkVisited": "{background}",
+            "PlaceholderText": "{color6}",
+            "PlaceholderText-disabled": "#cdd6f4",
+            "Text": "{foreground}",
+            "Text-disabled": "#585b70",
+            "ToolTipBase": "{background}",
+            "ToolTipText": "{foreground}",
+            "ToolTipText-disabled": "#cdd6f4",
+            "Window": "{background}",
+            "WindowText": "{foreground}",
+            "WindowText-disabled": "#585b70"
+        }},
+        "use_custom": true
+    }}
+}}
