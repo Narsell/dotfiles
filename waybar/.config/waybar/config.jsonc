@@ -41,7 +41,8 @@
 
 		},
         "mpris": {
-			"player": "chromium",	
+			"player": "chromium",
+			"interval": 5,	
 			"format": "{status_icon} {title} - {artist}",
 			"format-stopped": "{status_icon}",
 			"artist-len": 15,
@@ -107,9 +108,9 @@
 		"custom/colortemp": {
 			"format": "{icon}",
 			"format-icons": ["󱩍", "󱩌"],
-			"interval": 30,
-			"exec": "/home/daniel/Documents/gradtemp/zig-out/bin/gradtemp",
-			"on-click": "/home/daniel/Documents/gradtemp/zig-out/bin/gradtemp tgl",
+			"interval": 5,
+			"exec": "gradtemp",
+			"on-click": "gradtemp tgl",
 			"return-type": "json"
 		},
 		"group/connection":
