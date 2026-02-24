@@ -4,7 +4,7 @@
 @define-color text @foreground;
 @define-color bg alpha(@background,.85);
 @define-color bg-hover alpha(@background,.95);
-@define-color main-color @color1;
+@define-color main-color @color2;
 
 @keyframes fadeIn{
 0% {
@@ -29,14 +29,14 @@
 .floating-notifications.background .notification-background .notification .notification-content {
 }
 .notification{
-    background: alpha(@main-color,.85);
+    background: alpha(@main-color,.95);
 
 }
 
 .control-center .notification-row .notification-background .notification {
     margin-top: 0.150rem;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
-    background: alpha(@main-color, .85);
+    background: alpha(@main-color, .95);
 
 }
 .floating-notifications .notification{
