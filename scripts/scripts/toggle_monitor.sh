@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# author: @narsell
 
 # Script to toggle on or off a given monitor
 
