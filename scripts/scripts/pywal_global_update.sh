@@ -1,23 +1,32 @@
 #!/usr/bin/env bash
+# author: @narsell
 
-# A script to apply a new pywal theme to all relevant applications.
-# This script is intended to be called by another program (like waypaper)
-# that provides the path to the new wallpaper as the first argument.
+# A script that runs pywal to generate colors from a wallpaper and reloads applications.
+# If a wallpaper path is not provided, it will reload the current theme from the currently selected wallpaper.
 
 set -e
 
-if [ -z "$1" ]; then
-    echo "No wallpaper path provided. Won't update pywal and walcord colors."
+WAL_CACHE_DIR="${HOME}/.cache/wal"
+
+if [[ -z "$1" ]]; then
+    echo "No wallpaper path provided, updating colors with current wallpaper..."
+	wal --cols16=lighten -e -w
+
+	LAST_USED_THEME=$(cat "${WAL_CACHE_DIR}/last_used_theme")
+	if [[ -n "$LAST_USED_THEME" ]]; then
+		echo "Updating Vesktop walcord with theme ${LAST_USED_THEME}..."
+		walcord -j "${WAL_CACHE_DIR}/schemes/${LAST_USED_THEME}" -t ~/.config/vesktop/themes/midnight-vesktop.template.css -o ~/.config/vesktop/themes/midnight-vesktop.theme.css
+	fi
 else
 	WALLPAPER_PATH="$1"
-	echo "Setting new theme from: $WALLPAPER_PATH"
-	wal -q -i "$WALLPAPER_PATH"
+	echo "Setting new theme from: ${WALLPAPER_PATH}..."
+	wal --cols16=lighten -e -i "$WALLPAPER_PATH"
 	
 	echo "Updating Vesktop walcord theme..."
 	walcord -i $WALLPAPER_PATH -t ~/.config/vesktop/themes/midnight-vesktop.template.css -o ~/.config/vesktop/themes/midnight-vesktop.theme.css 
 fi
 
-echo "Reloading Wayland notification daemon..."
+echo "Reloading swaync notification control center..."
 swaync-client -rs
 
 echo "Reloading Waybar for new theme..."

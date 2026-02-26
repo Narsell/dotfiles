@@ -16,6 +16,7 @@
 				"sterminal": "",
 				"kitty": "",
 					"class<kitty> title<vim.*>": "",
+				"sioyek": "",
 				"calibre-ebook-viewer": "",
 				"calibre-gui": "󰌱",
 				"class<UnrealEditor-?.*> title<.+>": "<span font_size='10pt'>󰦱</span>",

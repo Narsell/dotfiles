@@ -25,3 +25,6 @@ ln -s ~/.cache/wal/heroic-launcher.css ~/.config/heroic/themes/
 
 # Stremio theme
 ln ~/.cache/wal/liquid-glass.theme.css ~/.config/stremio-enhanced/themes/liquid-glass.theme.css
+
+# Sioyek theme
+ln -s ~/.cache/wal/prefs_user.config ~/.config/sioyek/prefs_user.config
