@@ -5,7 +5,7 @@ options=$(pactl -f json list sinks | jq -r '.[] | .description')
 
 # Let the user select a description
 selection=$(printf "$options" | rofi -dmenu -config simple-config.rasi \
-	-theme-str 'window { height: 30%; }' \
+	-theme-str 'window { width: 700px; height: 285px; }' \
 	-theme-str 'entry  { placeholder: "Sink Selector"; }'
 )
 

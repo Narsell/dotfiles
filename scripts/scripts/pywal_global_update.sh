@@ -7,10 +7,12 @@
 set -e
 
 WAL_CACHE_DIR="${HOME}/.cache/wal"
+COLORGEN_BACKEND="colorthief"
+WAL_CMD="wal --cols16=lighten --backend=${COLORGEN_BACKEND}"
 
 if [[ -z "$1" ]]; then
     echo "No wallpaper path provided, updating colors with current wallpaper..."
-	wal --cols16=lighten -e -w
+	$WAL_CMD -w
 
 	LAST_USED_THEME=$(cat "${WAL_CACHE_DIR}/last_used_theme")
 	if [[ -n "$LAST_USED_THEME" ]]; then
@@ -18,19 +20,16 @@ if [[ -z "$1" ]]; then
 		walcord -j "${WAL_CACHE_DIR}/schemes/${LAST_USED_THEME}" -t ~/.config/vesktop/themes/midnight-vesktop.template.css -o ~/.config/vesktop/themes/midnight-vesktop.theme.css
 	fi
 else
-	WALLPAPER_PATH="$1"
 	echo "Setting new theme from: ${WALLPAPER_PATH}..."
-	wal --cols16=lighten -e -i "$WALLPAPER_PATH"
+	WALLPAPER_PATH="$1"
+	$WAL_CMD -i "$WALLPAPER_PATH"
 	
 	echo "Updating Vesktop walcord theme..."
-	walcord -i $WALLPAPER_PATH -t ~/.config/vesktop/themes/midnight-vesktop.template.css -o ~/.config/vesktop/themes/midnight-vesktop.theme.css 
+	walcord -i "$WALLPAPER_PATH" -t ~/.config/vesktop/themes/midnight-vesktop.template.css -o ~/.config/vesktop/themes/midnight-vesktop.theme.css 
 fi
 
 echo "Reloading swaync notification control center..."
 swaync-client -rs
-
-echo "Reloading Waybar for new theme..."
-killall -SIGUSR2 waybar
 
 echo "Updating Firefox theme..."
 pywalfox update --verbose -p
@@ -38,7 +37,10 @@ pywalfox update --verbose -p
 echo "Merging Xresources for dmenu and other X apps..."
 xrdb -merge ~/.Xresources
 
-echo "Reset GTK theme"
-~/scripts/reset_gtk_theme.sh
+## NO LONGER NEEDED BECAUSE PYWAL16 HANDLES THIS! ##
+	#echo "Reset GTK theme"
+	#~/scripts/reset_gtk_theme.sh
+	#echo "Reloading Waybar for new theme..." 
+	#killall -SIGUSR2 waybar
 
 echo "==> Theme update complete!"
