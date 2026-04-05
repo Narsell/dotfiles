@@ -22,6 +22,7 @@ wall_dir="${HOME}/Pictures/Wallpapers/"
 cache_dir="${HOME}/.cache/thumbnails/wal_selector"
 rofi_config_path="${HOME}/.config/rofi/wallpaper-sel-config.rasi "
 rofi_command="rofi -dmenu -config ${rofi_config_path}"
+wallpaper_backend="awww"
 
 # Create cache dir if not exists
 if [ ! -d "${cache_dir}" ] ; then
@@ -43,7 +44,7 @@ wall_selection=$(ls "${wall_dir}" -t | while read -r A ; do  echo -en "$A\x00ico
 
 # Set the wallpaper with waypaper
 [[ -n "$wall_selection" ]] || exit 1
-waypaper --wallpaper ${wall_dir}${wall_selection}
+waypaper --backend ${wallpaper_backend} --wallpaper ${wall_dir}${wall_selection}
 
 exit 0
 
