@@ -128,7 +128,7 @@ scrollbar {{
 	border-radius: 				 5px;
 	margin: 					 0px 0px 0px 10px;		
 	background-color: 			 rgba({foreground.rgb}, 0.3);
-	handle-color: 				 {color2};
+	handle-color: 				 rgba({foreground.rgb}, 1.0);
     handle-width: 				 4px;
 }}
 
@@ -142,16 +142,16 @@ element {{
     border-radius:               10px;
     cursor:                      pointer;
     background-color:            @foreground;
-	border:						 2px;
-	border-color:				 rgba({color7.rgb}, 0.8);
+	border:						 3px;
+	border-color:				 rgba({foreground.rgb}, 1.0);
     text-color:                  @background;
 }}
 
 element selected.normal {{
     background-color:            @selected-normal-background;
     text-color:                  @selected-normal-foreground;
-	border-color:				 {color2};
-	border:						 3px;
+	border-color:				 {color10};
+	border:						 5px;
 }}
 
 element-icon {{
@@ -163,7 +163,7 @@ element-icon {{
 }}
 
 element-text {{
-   	enabled:					 true;	
+   	enabled:					 false;	
 	font: 						 "Caskaydia Cove Nerd Font 12";
 	vertical-align:				 0.5; 
    	horizontal-align:		     0.5; 
