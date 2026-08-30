@@ -18,12 +18,12 @@ window#waybar{
     margin: 10px 10px 0px 0px;
 }
 tooltip {
-    background: @background;
+    background: @foreground;
     border: 1px solid alpha(@color1, 0.8);
-    color: @foreground;
+    color: @background;
 }
 #clock:hover, #custom-updates:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover,#pulseaudio:hover,#language:hover, #mpris:hover, #custom-control-center:hover, #custom-updates:hover label{
-    color: @color2;
+    color: @color3;
 }
 
 #custom-dnd:hover, #custom-tray-icon:hover, #custom-colortemp:hover {
@@ -31,17 +31,17 @@ tooltip {
 }
 
 .modules-right .module, .modules-left .module, .modules-center .module {
-    color: @foreground;
+    color: @color2;
 }
 
 #mpris, #clock, #workspaces, #tray, #perf, #misc, #audio, #connection, #custom-control-center, #custom-updates, #privacy {
-    color: @foreground;
+    color: @color2;
 	padding: 10px 15px;
 	margin: 0px 5px;
-	border-radius: 5px;
-    background: alpha(@background, 1);
-	border: 1px solid alpha(@color2, 0.8);
-    box-shadow: 0px 0px 2px alpha(@color2, 1);
+	border-radius: 10px;
+    background: alpha(@foreground, 1.0);
+	border: 2px solid alpha(@color2, 1.0);
+    box-shadow: 0px 0px 2px alpha(@color2, 1.0);
 }
 
 #audio .module, #connection .module, #misc .module {
@@ -60,13 +60,13 @@ tooltip {
     padding: 0px 10px;
 }
 #workspaces button label { 
-   color: alpha(@foreground, 0.5);
+   color: alpha(@color2, 0.5);
 }
 #workspaces button:hover label {
-    color: alpha(@foreground, 0.85);
+    color: alpha(@color2, 0.85);
 }
 #workspaces button.active label {
-    color: alpha(@foreground, 1.0);
+    color: alpha(@color2, 1.0);
 }
 
 #tray #tray { /* Inner tray element. We don't want to style this.*/

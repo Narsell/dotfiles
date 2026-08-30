@@ -13,6 +13,7 @@ ln -s ~/.cache/wal/rofi-simple-config.rasi ~/.config/rofi/simple-config.rasi
 ln -s ~/.cache/wal/rofi-powermenu-config.rasi ~/.config/rofi/powermenu-config.rasi
 ln -s ~/.cache/wal/rofi-launcher-config.rasi ~/.config/rofi/launcher-config.rasi
 ln -s ~/.cache/wal/rofi-wallpaper-sel.rasi ~/.config/rofi/wallpaper-sel-config.rasi
+ln -s ~/.cache/wal/rofi-emoji-config.rasi ~/.config/rofi/emoji-config.rasi
 
 # Obsidian theme
 ln -s ~/.cache/wal/obsidian_template.css ~/Documents/Obsidian/Meditations/.obsidian/themes/Pywal/theme.css
